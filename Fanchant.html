@@ -83,15 +83,15 @@
     position:relative;
   }
   .hero-tag{
-    font-family:'Caveat',cursive;
-    font-size:24px;
+    font-family:'Bebas Neue',sans-serif;
+    font-size:13px;
     color:var(--pink-hot);
-    margin-bottom:8px;
-    transform:rotate(-2deg);
+    margin-bottom:14px;
     display:inline-block;
+    letter-spacing:.3em;
   }
-  .hero-tag::before{content:'✿ '}
-  .hero-tag::after{content:' ✿'}
+  .hero-tag::before{content:'✿  '}
+  .hero-tag::after{content:'  ✿'}
   .hero-year{
     font-family:'Bebas Neue',sans-serif;
     font-size:clamp(28px,5vw,48px);
@@ -145,13 +145,13 @@
     letter-spacing:.18em;
   }
   .hero-team{
-    font-family:'Cormorant Garamond',serif;
-    font-style:italic;
-    font-size:clamp(14px,2.2vw,17px);
+    font-family:'Noto Sans TC',sans-serif;
+    font-size:clamp(13px,2vw,15px);
     color:var(--pink-hot);
     margin-bottom:40px;
     letter-spacing:.05em;
     padding:0 16px;
+    font-weight:500;
   }
 
   /* ===== Color Legend ===== */
@@ -176,11 +176,13 @@
   }
   .legend-title{
     width:100%;
-    font-family:'Caveat',cursive;
-    font-size:20px;
+    font-family:'Noto Sans TC',sans-serif;
+    font-size:14px;
     color:var(--pink-hot);
     text-align:center;
     margin-bottom:6px;
+    font-weight:500;
+    letter-spacing:.05em;
   }
   .legend-item{
     display:flex;align-items:center;gap:10px;
@@ -350,12 +352,14 @@
     box-shadow:0 4px 12px rgba(236,58,130,.4);
   }
   .video-label{
-    font-family:'Caveat',cursive;
-    font-size:16px;
+    font-family:'Noto Sans TC',sans-serif;
+    font-size:13px;
     color:var(--pink-hot);
     display:block;
-    line-height:1;
+    line-height:1.2;
     margin-bottom:3px;
+    font-weight:500;
+    letter-spacing:.05em;
   }
   .video-title{
     font-size:14px;
@@ -562,7 +566,7 @@
     0%,100%{transform:scale(1)}
     50%{transform:scale(1.2)}
   }
-  footer .bracket{color:var(--pink-hot);font-family:'Caveat',cursive;font-size:18px;letter-spacing:.05em}
+  footer .bracket{color:var(--pink-hot);font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:.2em}
 
   /* ===== Back to top ===== */
   .top-btn{
@@ -586,14 +590,28 @@
 
   /* ===== Mobile ===== */
   @media (max-width:640px){
-    .hero-text{padding:32px 20px 50px}
+    .hero-text{padding:60px 20px 50px}
     .hero h1::before{left:-12px;right:-12px}
     .legend{gap:10px;padding:18px}
     .legend-item{font-size:12px}
     main{padding:36px 18px 100px}
     .lyrics{font-size:15px;line-height:2}
     .lyrics .stanza{padding:14px 16px}
-    .nav-btn{padding:8px 14px;font-size:12px}
+
+    /* 手機版導覽列：兩排 grid */
+    .nav-inner{
+      display:grid;
+      grid-template-columns:repeat(4, 1fr);
+      gap:8px;
+      overflow-x:visible;
+      padding:0 16px;
+    }
+    .nav-btn{
+      padding:9px 6px;
+      font-size:12px;
+      text-align:center;
+      width:100%;
+    }
   }
 </style>
 </head>
@@ -606,17 +624,17 @@
     <h1>ALIVE</h1>
     <div class="hero-sub">DONGHAE 1ST SOLO CONCERT TOUR</div>
     <div class="hero-zh">in&nbsp;&nbsp;T A I P E I</div>
-    <div class="hero-team">— Donghae TW&ELF Union　台灣聯合應援團隊 —</div>
+    <div class="hero-team">Donghae TW&ELF Union　台灣聯合應援團隊</div>
 
     <div class="legend">
-      <div class="legend-title">— Color Guide ・ 顏色說明 —</div>
+      <div class="legend-title">Color Guide ・ 顏色說明</div>
       <div class="legend-item kor"><span class="legend-dot"></span><span>韓文歌詞 / Lyrics</span></div>
       <div class="legend-item vocal"><span class="legend-dot"></span><span>跟唱 / 跟唸 Sing-along</span></div>
       <div class="legend-item cheer"><span class="legend-dot"></span><span>應援詞 Fanchant</span></div>
     </div>
 
     <div class="note">
-      🌸 <strong>注意事項</strong>　以下內容為轉載自網路資源整理影片，希望能協助 E.L.F. 多多熟悉應援口號，一起為東海加油！部分曲目將依首爾場曲目持續更新。來源請見原影片發佈者。
+      🌸 <strong>注意事項</strong>　本頁所有應援口號、歌詞、教學影片均轉載自網路公開資源，著作權皆屬原作者及版權方所有。本頁僅作為粉絲應援用途整理，<strong>非商業使用</strong>。讓我們一起為東海加油！ 🩷
     </div>
   </div>
 </section>
@@ -638,7 +656,6 @@
   <!-- ===== 해 떴네 ===== -->
   <article class="song active" id="song-haetnae">
     <div class="song-header">
-      <div class="song-num">TRACK 01 / SOLO DEBUT</div>
       <h1 class="song-title">해 떴네</h1>
       <div class="song-subtitle">The Sun Has Risen — 李東海 LEE DONG HAE</div>
     </div>
@@ -773,12 +790,11 @@
   <!-- ===== GGB ===== -->
   <article class="song" id="song-ggb">
     <div class="song-header">
-      <div class="song-num">TRACK 02 / D&E TWELF</div>
       <h1 class="song-title">GGB 지지배</h1>
       <div class="song-subtitle">D&E 應援口號教學</div>
     </div>
 
-    <div class="video-section">
+    <div class="video-section open">
       <button class="video-toggle" onclick="toggleVideo(this)">
         <div class="video-toggle-left">
           <div class="video-icon">▶</div>
@@ -909,12 +925,11 @@
   <!-- ===== 'Bout You ===== -->
   <article class="song" id="song-bout">
     <div class="song-header">
-      <div class="song-num">TRACK 03 / D&E</div>
       <h1 class="song-title">'Bout You</h1>
       <div class="song-subtitle">SUPER JUNIOR D&E — All About You</div>
     </div>
 
-    <div class="video-section">
+    <div class="video-section open">
       <button class="video-toggle" onclick="toggleVideo(this)">
         <div class="video-toggle-left">
           <div class="video-icon">▶</div>
@@ -1030,12 +1045,11 @@
   <!-- ===== Oppa Oppa ===== -->
   <article class="song" id="song-oppa">
     <div class="song-header">
-      <div class="song-num">TRACK 04 / CLASSIC</div>
       <h1 class="song-title">Oppa, Oppa</h1>
       <div class="song-subtitle">Super Junior D&E — 國際的歐巴</div>
     </div>
 
-    <div class="video-section">
+    <div class="video-section open">
       <button class="video-toggle" onclick="toggleVideo(this)">
         <div class="video-toggle-left">
           <div class="video-icon">▶</div>
@@ -1124,12 +1138,11 @@
   <!-- ===== California Love ===== -->
   <article class="song" id="song-cali">
     <div class="song-header">
-      <div class="song-num">TRACK 05 / DONGHAE</div>
       <h1 class="song-title">California Love</h1>
       <div class="song-subtitle">東海 — Let's Feel The Sunshine</div>
     </div>
 
-    <div class="video-section">
+    <div class="video-section open">
       <button class="video-toggle" onclick="toggleVideo(this)">
         <div class="video-toggle-left">
           <div class="video-icon">▶</div>
@@ -1147,8 +1160,8 @@
             <a class="ig-card" href="https://www.instagram.com/dh65_elf/reel/DA982fGTDXf/" target="_blank" rel="noopener noreferrer">
               <div class="ig-icon-wrap">📷</div>
               <div class="ig-text">
-                <div class="ig-handle">@dh65_elf</div>
-                <div class="ig-desc">California Love 應援教學 Reel</div>
+                <div class="ig-handle">Instagram Reel</div>
+                <div class="ig-desc">California Love 應援教學</div>
               </div>
               <div class="ig-arrow">↗</div>
             </a>
@@ -1289,12 +1302,11 @@
   <!-- ===== 太完美 ===== -->
   <article class="song" id="song-perfect">
     <div class="song-header">
-      <div class="song-num">TRACK 06 / SUPER JUNIOR-M</div>
       <h1 class="song-title">太完美</h1>
       <div class="song-subtitle">SUPER JUNIOR-M — Perfection (Mandarin Ver.)</div>
     </div>
 
-    <div class="video-section">
+    <div class="video-section open">
       <button class="video-toggle" onclick="toggleVideo(this)">
         <div class="video-toggle-left">
           <div class="video-icon">▶</div>
@@ -1431,7 +1443,6 @@
   <!-- ===== 我們是 E.L.F. ===== -->
   <article class="song" id="song-elf">
     <div class="song-header">
-      <div class="song-num">SPECIAL / TWELF</div>
       <h1 class="song-title">我們是 E.L.F.</h1>
       <div class="song-subtitle">Always Keep The Faith — TWELF 應援口號教學</div>
     </div>
@@ -1475,7 +1486,7 @@
 <footer>
   <div class="bracket">— ALIVE in TAIPEI · 2026 —</div>
   <div>整理 with <span class="heart">♥</span> by Donghae TW&ELF Union</div>
-  <div style="margin-top:6px;font-size:13px;color:var(--pink-hot);font-family:'Caveat',cursive;letter-spacing:.05em;">台灣聯合應援團隊</div>
+  <div style="margin-top:6px;font-size:13px;color:var(--pink-hot);letter-spacing:.05em;">台灣聯合應援團隊</div>
   <div style="margin-top:14px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;">Always Keep The Faith ・ 我們會一直陪著你</div>
 </footer>
 
