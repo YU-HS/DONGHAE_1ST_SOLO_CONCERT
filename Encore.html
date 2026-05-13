@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026 DONGHAE [ALIVE] in TAIPEI ・ 安可曲應援 ENCORE GUIDE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Sans+TC:wght@300;400;500;700;900&family=Noto+Serif+TC:wght@400;700&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fff8f0;
+    --cream-soft:#fdf2e8;
+    --pink-pale:#fde2e8;
+    --pink:#f7b8c4;
+    --pink-hot:#ec3a82;
+    --yellow:#ffd944;
+    --yellow-soft:#fff3a8;
+    --sage:#9bb39a;
+    --ink:#3a3845;
+    --ink-soft:#6b6878;
+    --muted:#a09da8;
+    --c-vocal:#ec3a82;
+    --c-cheer:#e8a317;
+    --c-kor:#3a3845;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+
+  body{
+    font-family:'Noto Sans TC',sans-serif;
+    background:var(--cream);
+    color:var(--ink);
+    line-height:1.85;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+    position:relative;
+  }
+
+  body::before{
+    content:'';
+    position:fixed;inset:0;
+    background:
+      radial-gradient(ellipse 600px 400px at 5% 15%, rgba(247,184,196,.35), transparent 60%),
+      radial-gradient(ellipse 500px 350px at 95% 80%, rgba(255,217,68,.15), transparent 65%),
+      radial-gradient(ellipse 400px 300px at 50% 50%, rgba(253,226,232,.4), transparent 70%);
+    pointer-events:none;z-index:0;
+  }
+  body::after{
+    content:'';
+    position:fixed;inset:0;
+    background-image:
+      radial-gradient(circle 4px at 10% 20%, rgba(247,184,196,.4), transparent),
+      radial-gradient(circle 3px at 80% 30%, rgba(255,217,68,.3), transparent),
+      radial-gradient(circle 5px at 60% 70%, rgba(247,184,196,.3), transparent),
+      radial-gradient(circle 3px at 25% 85%, rgba(255,217,68,.4), transparent),
+      radial-gradient(circle 4px at 90% 60%, rgba(247,184,196,.35), transparent);
+    background-size:800px 800px;
+    pointer-events:none;z-index:0;
+    opacity:.6;
+    animation:floatBg 30s ease-in-out infinite alternate;
+  }
+  @keyframes floatBg{
+    from{transform:translate(0,0)}
+    to{transform:translate(-30px,20px)}
+  }
+
+  /* HERO */
+  .hero{
+    position:relative;z-index:2;
+    padding:0;
+  }
+  .hero-text{
+    text-align:center;
+    padding:80px 24px 40px;
+  }
+  .hero-tag{
+    font-family:'Bebas Neue',sans-serif;
+    font-size:13px;
+    color:var(--pink-hot);
+    margin-bottom:14px;
+    display:inline-block;
+    letter-spacing:.3em;
+  }
+  .hero-tag::before{content:'✿  '}
+  .hero-tag::after{content:'  ✿'}
+  .hero-year{
+    font-family:'Bebas Neue',sans-serif;
+    font-size:clamp(28px,5vw,48px);
+    color:var(--ink-soft);
+    letter-spacing:.2em;
+    margin-bottom:4px;
+    line-height:1;
+  }
+  .hero h1{
+    font-family:'Bebas Neue',sans-serif;
+    font-size:clamp(72px,14vw,160px);
+    line-height:.92;
+    letter-spacing:.04em;
+    color:var(--ink);
+    margin-bottom:18px;
+    position:relative;
+    display:inline-block;
+  }
+  .hero h1::before{
+    content:'';
+    position:absolute;
+    left:-20px;right:-20px;top:55%;
+    height:42%;
+    background:var(--yellow);
+    z-index:-1;
+    transform:translateY(-50%) rotate(-2deg);
+    opacity:.7;
+    border-radius:8px;
+  }
+  .hero h1::after{
+    content:'♡';
+    position:absolute;
+    top:-8px;right:-32px;
+    font-size:32px;
+    color:var(--pink-hot);
+    transform:rotate(15deg);
+    font-family:'Caveat',cursive;
+  }
+  .hero-sub{
+    font-family:'Bebas Neue',sans-serif;
+    font-size:clamp(14px,2.4vw,20px);
+    color:var(--ink);
+    margin-bottom:6px;
+    letter-spacing:.18em;
+  }
+  .hero-team{
+    font-family:'Noto Sans TC',sans-serif;
+    font-size:clamp(13px,2vw,15px);
+    color:var(--pink-hot);
+    margin-bottom:40px;
+    letter-spacing:.05em;
+    padding:0 16px;
+    font-weight:500;
+  }
+
+  .note{
+    max-width:680px;
+    text-align:left;
+    font-size:14px;color:var(--ink-soft);
+    padding:20px 24px;
+    border-radius:14px;
+    background:linear-gradient(135deg, var(--yellow-soft), rgba(255,243,168,.4));
+    border:1px solid rgba(255,217,68,.5);
+    margin:0 auto;
+  }
+  .note strong{color:var(--pink-hot);font-weight:700}
+
+  /* Sticky Nav */
+  .nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,248,240,.92);
+    backdrop-filter:blur(16px);
+    border-bottom:1px solid rgba(247,184,196,.4);
+    padding:14px 0;
+  }
+  .nav-inner{
+    display:flex;gap:8px;justify-content:center;
+    padding:0 24px;
+    max-width:1100px;margin:0 auto;
+  }
+  .nav-btn{
+    flex:0 0 auto;
+    background:#fff;
+    border:1.5px solid var(--pink);
+    color:var(--ink);
+    padding:9px 22px;
+    font-family:'Noto Sans TC',sans-serif;
+    font-size:13px;font-weight:500;
+    letter-spacing:.05em;
+    border-radius:999px;
+    cursor:pointer;
+    transition:all .25s ease;
+    white-space:nowrap;
+  }
+  .nav-btn:hover{
+    border-color:var(--pink-hot);
+    color:var(--pink-hot);
+    transform:translateY(-1px);
+    box-shadow:0 4px 12px rgba(236,58,130,.15);
+  }
+  .nav-btn.active{
+    background:var(--pink-hot);
+    border-color:var(--pink-hot);
+    color:#fff;
+    box-shadow:0 4px 16px rgba(236,58,130,.35);
+  }
+
+  /* Main */
+  main{
+    position:relative;z-index:2;
+    max-width:820px;
+    margin:0 auto;
+    padding:50px 24px 120px;
+  }
+
+  .day{
+    display:none;
+    animation:fadeIn .5s ease;
+  }
+  .day.active{display:block}
+  @keyframes fadeIn{
+    from{opacity:0;transform:translateY(20px)}
+    to{opacity:1;transform:translateY(0)}
+  }
+
+  .day-header{
+    margin-bottom:32px;
+    padding-bottom:24px;
+    border-bottom:2px dashed var(--pink);
+    text-align:left;
+  }
+  .day-date{
+    font-family:'Bebas Neue',sans-serif;
+    font-size:clamp(28px,5vw,40px);
+    color:var(--pink-hot);
+    letter-spacing:.08em;
+    line-height:1;
+    margin-bottom:8px;
+  }
+  .day-weekday{
+    color:var(--ink-soft);
+    font-size:.7em;
+    margin-left:6px;
+    letter-spacing:.15em;
+  }
+  .day-title{
+    font-family:'Bebas Neue',sans-serif;
+    font-size:clamp(40px,7vw,72px);
+    line-height:1;
+    color:var(--ink);
+    margin-bottom:4px;
+    letter-spacing:.01em;
+    display:inline-block;
+    position:relative;
+  }
+  .day-title::after{
+    content:'';
+    position:absolute;
+    left:-6px;right:-6px;bottom:6px;
+    height:14px;
+    background:var(--yellow);
+    z-index:-1;
+    opacity:.55;
+    border-radius:4px;
+    transform:rotate(-1deg);
+  }
+
+  /* 執行時間提示 */
+  .timing{
+    display:flex;align-items:center;gap:10px;
+    background:linear-gradient(135deg, rgba(236,58,130,.08), rgba(255,217,68,.1));
+    border:1.5px solid rgba(236,58,130,.25);
+    border-radius:14px;
+    padding:14px 18px;
+    margin-bottom:32px;
+    font-size:14px;
+  }
+  .timing-icon{
+    font-size:18px;
+    flex-shrink:0;
+  }
+  .timing strong{
+    color:var(--pink-hot);
+    font-weight:700;
+    margin-right:4px;
+  }
+
+  /* 歌曲試聽影片區塊 */
+  .video-section{
+    margin-bottom:32px;
+    background:#fff;
+    border:2px solid var(--pink);
+    border-radius:18px;
+    padding:18px;
+    box-shadow:0 4px 20px rgba(247,184,196,.25);
+  }
+  .video-label-row{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:14px;
+    color:var(--ink);
+    font-size:14px;
+    font-weight:500;
+    letter-spacing:.05em;
+  }
+  .video-icon{
+    width:28px;height:28px;
+    display:inline-flex;align-items:center;justify-content:center;
+    background:var(--pink-hot);
+    color:#fff;
+    border-radius:50%;
+    font-size:11px;
+    box-shadow:0 4px 12px rgba(236,58,130,.4);
+  }
+  .video-iframe-wrap{
+    position:relative;
+    width:100%;
+    padding-bottom:56.25%;
+    background:#000;
+    border-radius:10px;
+    overflow:hidden;
+  }
+  .video-iframe-wrap iframe{
+    position:absolute;
+    top:0;left:0;
+    width:100%;height:100%;
+    border:none;
+  }
+
+  /* DAY 1 口號專屬樣式 */
+  .chant-list{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    margin-bottom:32px;
+  }
+  .chant-item{
+    background:#fff;
+    border:2px solid var(--pink);
+    border-radius:18px;
+    padding:18px 22px;
+    box-shadow:0 4px 20px rgba(247,184,196,.25);
+    display:flex;
+    align-items:center;
+    gap:16px;
+  }
+  .chant-num{
+    width:34px;height:34px;
+    flex-shrink:0;
+    display:flex;align-items:center;justify-content:center;
+    background:var(--pink-hot);
+    color:#fff;
+    border-radius:50%;
+    font-family:'Bebas Neue',sans-serif;
+    font-size:17px;
+    box-shadow:0 4px 12px rgba(236,58,130,.4);
+  }
+  .chant-line{
+    flex:1;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    flex-wrap:wrap;
+  }
+  .chant-action{
+    font-size:13px;
+    color:var(--pink-hot);
+    background:rgba(236,58,130,.1);
+    padding:4px 10px;
+    border-radius:999px;
+    font-weight:600;
+    letter-spacing:.05em;
+    flex-shrink:0;
+  }
+  .chant-korean{
+    font-size:22px;
+    font-weight:700;
+    color:var(--ink);
+    line-height:1.2;
+  }
+  .chant-pron-inline{
+    color:var(--pink-hot);
+    font-size:.7em;
+    font-weight:500;
+    margin-left:2px;
+    letter-spacing:.05em;
+  }
+  .chant-plus{
+    color:var(--ink-soft);
+    font-size:16px;
+    font-weight:300;
+  }
+  .chant-claps-row{
+    display:inline-flex;
+    align-items:center;
+    gap:4px;
+    background:var(--yellow-soft);
+    padding:5px 12px;
+    border-radius:999px;
+    font-size:13px;
+    color:var(--ink);
+    font-weight:600;
+    letter-spacing:.05em;
+  }
+  .clap-emoji{font-size:14px}
+  .clap-text{margin-left:4px}
+
+  /* 歌詞顯示（DAY 2 / DAY 3） */
+  .lyrics{
+    font-size:16px;
+    line-height:2.1;
+  }
+  .lyrics p{
+    margin-bottom:1.4em;
+    color:var(--ink);
+  }
+  .stanza{
+    padding:18px 22px;
+    margin-bottom:20px;
+    background:#fff;
+    border-radius:14px;
+    box-shadow:0 2px 12px rgba(247,184,196,.2);
+    border:1px solid rgba(247,184,196,.3);
+  }
+  .vocal{
+    color:var(--c-vocal);
+    font-weight:600;
+    background:rgba(236,58,130,.08);
+    padding:1px 6px;
+    border-radius:4px;
+  }
+
+  /* Footer */
+  footer{
+    position:relative;z-index:2;
+    text-align:center;
+    padding:48px 24px;
+    border-top:2px dashed var(--pink);
+    color:var(--ink-soft);
+    font-size:13px;
+    line-height:2;
+    background:rgba(255,255,255,.5);
+  }
+  footer .bracket{
+    color:var(--pink-hot);
+    font-family:'Bebas Neue',sans-serif;
+    font-size:14px;
+    letter-spacing:.2em;
+  }
+
+  /* Top button */
+  .top-btn{
+    position:fixed;
+    bottom:24px;right:24px;
+    width:48px;height:48px;
+    border-radius:50%;
+    background:var(--pink-hot);
+    border:none;
+    color:#fff;
+    font-size:20px;
+    cursor:pointer;
+    z-index:60;
+    display:none;
+    align-items:center;justify-content:center;
+    box-shadow:0 6px 20px rgba(236,58,130,.5);
+    transition:all .3s ease;
+  }
+  .top-btn:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(236,58,130,.6)}
+  .top-btn.show{display:flex}
+
+  /* Mobile */
+  @media (max-width:640px){
+    .hero-text{padding:60px 20px 30px}
+    .hero h1::before{left:-12px;right:-12px}
+    main{padding:36px 18px 100px}
+    .lyrics{font-size:15px;line-height:2}
+    .stanza{padding:14px 16px}
+    .nav-inner{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:8px;
+    }
+    .nav-btn{padding:9px 6px;font-size:12px;width:100%;text-align:center}
+    .chant-item{padding:14px 16px;gap:12px}
+    .chant-korean{font-size:18px}
+    .chant-pron-inline{font-size:.65em}
+    .chant-num{width:30px;height:30px;font-size:14px}
+    .chant-line{gap:8px}
+    .chant-action{font-size:12px;padding:3px 8px}
+    .chant-claps-row{padding:4px 10px;font-size:12px}
+    .clap-emoji{font-size:13px}
+    .chant-plus{font-size:14px}
+  }
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-text">
+    <div class="hero-tag">ENCORE GUIDE ・ ALIVE IN TAIPEI</div>
+    <div class="hero-year">2026</div>
+    <h1>ENCORE</h1>
+    <div class="hero-sub">DONGHAE 1ST SOLO CONCERT TOUR in TAIPEI</div>
+    <div class="hero-team">Donghae TW&ELF Union　台灣聯合應援團隊</div>
+
+    <div style="margin-bottom:40px;">
+      <a href="Fanchant.html" style="display:inline-flex;align-items:center;gap:8px;text-decoration:none;background:var(--pink-hot);color:#fff;padding:12px 24px;border-radius:999px;font-size:14px;font-weight:500;letter-spacing:.05em;box-shadow:0 4px 16px rgba(236,58,130,.35);transition:all .25s ease;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 20px rgba(236,58,130,.5)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 16px rgba(236,58,130,.35)'">
+        🌸 前往應援口號
+        <span style="font-size:16px;">→</span>
+      </a>
+    </div>
+
+    <div class="note">
+      🌸 <strong>注意事項</strong>　本頁所有歌詞、影片均轉載自網路公開資源，著作權皆屬原作者及版權方所有。本頁僅作為粉絲應援用途整理，<strong>非商業使用</strong>。讓我們一起為東海加油！ 🩷
+    </div>
+  </div>
+</section>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <button class="nav-btn active" data-target="day-1">DAY 1</button>
+    <button class="nav-btn" data-target="day-2">DAY 2</button>
+    <button class="nav-btn" data-target="day-3">DAY 3</button>
+  </div>
+</nav>
+
+<main>
+
+  <!-- ============ DAY 1 ============ -->
+  <article class="day active" id="day-1">
+    <div class="day-header">
+      <div class="day-date">5 / 29 <span class="day-weekday">FRI</span></div>
+      <h1 class="day-title">口號</h1>
+    </div>
+
+    <div class="timing">
+      
+      <div>
+        <strong>執行時間</strong>末首歌曲表演後，等待安可時<br>
+        <strong>應援方式</strong>依序循環喊三句口號，每句後拍手三下，整齊有節奏地喊到東海再次登場！
+      </div>
+    </div>
+
+    <div class="chant-list">
+      <div class="chant-item">
+        <div class="chant-num">1</div>
+        <div class="chant-line">
+          <span class="chant-action">呼喊</span>
+          <span class="chant-korean">이동해<span class="chant-pron-inline">（李東海）</span></span>
+          <span class="chant-plus">+</span>
+          <span class="chant-claps-row">
+            <span class="clap-emoji">👏</span>
+            <span class="clap-emoji">👏</span>
+            <span class="clap-emoji">👏</span>
+            <span class="clap-text">拍手三下</span>
+          </span>
+        </div>
+      </div>
+
+      <div class="chant-item">
+        <div class="chant-num">2</div>
+        <div class="chant-line">
+          <span class="chant-action">呼喊</span>
+          <span class="chant-korean">해떴내<span class="chant-pron-inline">（嘿豆內）</span></span>
+          <span class="chant-plus">+</span>
+          <span class="chant-claps-row">
+            <span class="clap-emoji">👏</span>
+            <span class="clap-emoji">👏</span>
+            <span class="clap-emoji">👏</span>
+            <span class="clap-text">拍手三下</span>
+          </span>
+        </div>
+      </div>
+
+      <div class="chant-item">
+        <div class="chant-num">3</div>
+        <div class="chant-line">
+          <span class="chant-action">呼喊</span>
+          <span class="chant-korean">내사랑<span class="chant-pron-inline">（內撒浪）</span></span>
+          <span class="chant-plus">+</span>
+          <span class="chant-claps-row">
+            <span class="clap-emoji">👏</span>
+            <span class="clap-emoji">👏</span>
+            <span class="clap-emoji">👏</span>
+            <span class="clap-text">拍手三下</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- ============ DAY 2 ============ -->
+  <article class="day" id="day-2">
+    <div class="day-header">
+      <div class="day-date">5 / 30 <span class="day-weekday">SAT</span></div>
+      <h1 class="day-title">最好的朋友</h1>
+    </div>
+
+    <div class="timing">
+      
+      <div><strong>執行時間</strong>末首歌曲表演後，等待安可時</div>
+    </div>
+
+    <div class="video-section">
+      <div class="video-label-row">
+        <span class="video-icon">▶</span>
+        <span>最好的朋友</span>
+      </div>
+      <div class="video-iframe-wrap">
+        <iframe data-src="https://www.youtube.com/embed/E3-zKsYvd4k" title="最好的朋友" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+
+    <div class="lyrics">
+      <p class="stanza">
+        雪一片片的落在想念你的生活<br>
+        閉上雙眼你能否聽得到我
+      </p>
+
+      <p class="stanza">
+        最好的朋友 我還記得你對我說過<br>
+        才發現你也是我唯一的<br>
+        藍色的回憶是我們最珍貴的擁有<br>
+        想大聲對你說我正在想你呢
+      </p>
+
+      <p class="stanza">
+        愛就是你 陪伴我<br>
+        就算我也不相信自己的時候<br>
+        一起走過那麼多<br>
+        你已經成為我心中最溫暖角落<br>
+        黑暗中你在等我<br>
+        距離就不算什麼<br>
+        那些眼淚和顛簸<br>
+        都成為了你我守候到永久的承諾
+      </p>
+
+      <p class="stanza">
+        最好的朋友 我還記得你對我說過<br>
+        才發現你也是我唯一的<br>
+        藍色的回憶是我們最珍貴的擁有<br>
+        想大聲對你說我正在想你呢
+      </p>
+
+      <p class="stanza">
+        愛就是你 陪伴我<br>
+        就算我也不相信自己的時候<br>
+        一起走過那麼多<br>
+        你已經成為我心中最溫暖角落<br>
+        黑暗中你在等我<br>
+        距離就不算什麼<br>
+        那些眼淚和顛簸<br>
+        都成為了你我守候到永久的承諾
+      </p>
+
+      <p class="stanza">
+        要大聲對你說我正在想你呢<br>
+        愛就是你 陪伴我<br>
+        就算我也不相信自己的時候<br>
+        一起走過那麼多<br>
+        你已經成為我心中最溫暖角落<br>
+        黑暗中你在等我<br>
+        距離就不算什麼<br>
+        那些眼淚和顛簸<br>
+        都成為了你我守候到永久的承諾
+      </p>
+    </div>
+  </article>
+
+  <!-- ============ DAY 3 ============ -->
+  <article class="day" id="day-3">
+    <div class="day-header">
+      <div class="day-date">5 / 31 <span class="day-weekday">SUN</span></div>
+      <h1 class="day-title">約定</h1>
+    </div>
+
+    <div class="timing">
+      
+      <div><strong>執行時間</strong>末首歌曲表演後，等待安可時</div>
+    </div>
+
+    <div class="video-section">
+      <div class="video-label-row">
+        <span class="video-icon">▶</span>
+        <span>約定</span>
+      </div>
+      <div class="video-iframe-wrap">
+        <iframe data-src="https://www.youtube.com/embed/8N_2wiEdKpA" title="約定" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+
+    <div class="lyrics">
+      <p class="stanza">
+        依舊聽著熟悉的旋律<br>
+        是你 把溫度留在我的手心<br>
+        說好要一起完成遙遠的旅行<br>
+        剩下一人的風景
+      </p>
+
+      <p class="stanza">
+        是誰 讓冷風吹<br>
+        漫天煙花墜落成了心碎<br>
+        回憶了傷悲<br>
+        好讓眼淚被寂寞包圍 無法撤退
+      </p>
+
+      <p class="stanza">
+        愛還 停格在你的冬季<br>
+        多希望這場雪永不會停<br>
+        多想就這樣緊緊把你抱緊<br>
+        和你繼續每一個幸福的約定<br>
+        如此的美麗
+      </p>
+
+      <p class="stanza">
+        是誰<span class="vocal">（又是誰）</span><br>
+        讓冷風吹<span class="vocal">（讓冷風吹）</span><br>
+        漫天煙花墜落成了心碎<br>
+        回憶了傷悲<br>
+        好讓眼淚被寂寞包圍 無法撤退
+      </p>
+
+      <p class="stanza">
+        愛還 停格在你的冬季<br>
+        多希望這場雪永不會停<br>
+        多想就這樣緊緊把你抱緊<br>
+        和你繼續每一個幸福的約定<br>
+        就這樣愛你
+      </p>
+
+      <p class="stanza">
+        只怪我們太任性<span class="vocal">（只怪我們太任性）</span><br>
+        不小心錯過愛情<span class="vocal">（不小心錯過愛情）</span><br>
+        好多話想說卻來不及<br>
+        約定了曾經<span class="vocal">（約定了曾經）</span><br>
+        變成了結局<span class="vocal">（結局裡）</span><br>
+        就這樣失去你
+      </p>
+
+      <p class="stanza">
+        我還 停格在你的冬季<br>
+        多希望這場雪永不會停<br>
+        多想就這樣緊緊把你抱緊<br>
+        和你繼續每一個幸福的約定<br>
+        永遠愛著你
+      </p>
+    </div>
+  </article>
+
+</main>
+
+<button class="top-btn" id="topBtn" aria-label="回頂部">↑</button>
+
+<footer>
+  <div class="bracket">— ALIVE in TAIPEI · 2026 —</div>
+  <div>Donghae TW&ELF Union 台灣聯合應援團隊</div>
+</footer>
+
+<script>
+  // 影片懶載入
+  function loadVideosInDay(dayEl){
+    if(!dayEl) return;
+    const iframes = dayEl.querySelectorAll('iframe[data-src]');
+    iframes.forEach(iframe => {
+      iframe.src = iframe.dataset.src;
+      iframe.removeAttribute('data-src');
+    });
+  }
+  function unloadVideosInDay(dayEl){
+    if(!dayEl) return;
+    const iframes = dayEl.querySelectorAll('iframe[src]');
+    iframes.forEach(iframe => {
+      iframe.dataset.src = iframe.src;
+      iframe.removeAttribute('src');
+    });
+  }
+
+  const buttons = document.querySelectorAll('.nav-btn');
+  const days = document.querySelectorAll('.day');
+
+  buttons.forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      // 卸載前一天的影片
+      days.forEach(d => {
+        if(d.classList.contains('active')) unloadVideosInDay(d);
+        d.classList.remove('active');
+      });
+      buttons.forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      const target = document.getElementById(btn.dataset.target);
+      target.classList.add('active');
+      loadVideosInDay(target);
+      window.scrollTo({
+        top: document.querySelector('.nav').offsetTop,
+        behavior:'smooth'
+      });
+    });
+  });
+
+  // 初始：DAY 1 沒影片，所以一開始不會載入任何影片
+  const initialActive = document.querySelector('.day.active');
+  if(initialActive) loadVideosInDay(initialActive);
+
+  const topBtn = document.getElementById('topBtn');
+  window.addEventListener('scroll',()=>{
+    if(window.scrollY > 400) topBtn.classList.add('show');
+    else topBtn.classList.remove('show');
+  });
+  topBtn.addEventListener('click',()=>{
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+</script>
+
+</body>
+</html>
