@@ -121,49 +121,36 @@
     transform:rotate(15deg);
     font-family:'Caveat',cursive;
   }
-  .hero-btn-row{
-    display:inline-flex;
-    background:rgba(255,255,255,.7);
-    border:1px solid var(--pink);
-    border-radius:999px;
-    padding:4px;
-    gap:0;
-    margin:0 auto 40px;
-    box-shadow:0 2px 8px rgba(247,184,196,.2);
-  }
   .hero-btn-row-wrap{
     text-align:center;
-    margin-bottom:0;
+    margin-bottom:40px;
   }
-  .hero-btn{
+  .mp3-btn{
     display:inline-flex;
     align-items:center;
-    justify-content:center;
-    gap:6px;
+    gap:10px;
     text-decoration:none;
-    background:transparent;
-    color:var(--ink-soft);
-    padding:10px 22px;
-    border-radius:999px;
-    font-size:14px;
-    font-weight:500;
-    letter-spacing:.05em;
-    transition:all .25s ease;
-    white-space:nowrap;
-  }
-  .hero-btn:hover{
-    color:var(--pink-hot);
-  }
-  .hero-btn.active{
     background:var(--pink-hot);
     color:#fff;
-    box-shadow:0 2px 8px rgba(236,58,130,.3);
+    padding:14px 28px;
+    border-radius:999px;
+    font-size:15px;
     font-weight:600;
+    letter-spacing:.05em;
+    box-shadow:0 6px 20px rgba(236,58,130,.35);
+    transition:all .25s ease;
   }
-  .hero-btn-arrow{
-    font-size:14px;
-    font-weight:400;
+  .mp3-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 24px rgba(236,58,130,.45);
+  }
+  .mp3-icon{
+    font-size:18px;
+  }
+  .mp3-arrow{
+    font-size:16px;
     margin-left:2px;
+    opacity:.9;
   }
 
     /* ===== Color Legend ===== */
@@ -613,7 +600,7 @@
     /* 手機版導覽列：兩排 grid */
     .nav-inner{
       display:grid;
-      grid-template-columns:repeat(4, 1fr);
+      grid-template-columns:repeat(3, 1fr);
       gap:8px;
       overflow-x:visible;
       padding:0 16px;
@@ -636,10 +623,11 @@
     <h1>FANCHANT</h1>
 
     <div class="hero-btn-row-wrap">
-      <div class="hero-btn-row">
-        <a href="Fanchant.html" class="hero-btn active">應援口號</a>
-        <a href="Encore.html" class="hero-btn">安可曲應援</a>
-      </div>
+      <a href="https://drive.google.com/drive/folders/1nep5LHhhoVlLrpAfEneCbE5zOJoSaiaa?usp=sharing" target="_blank" rel="noopener noreferrer" class="mp3-btn">
+        <span class="mp3-icon">🎧</span>
+        <span>應援口號 MP3 下載</span>
+        <span class="mp3-arrow">↗</span>
+      </a>
     </div>
 
     <div class="legend">
@@ -658,11 +646,10 @@
 <nav class="nav" id="nav">
   <div class="nav-inner" id="navInner">
     <button class="nav-btn active" data-target="song-haetnae">해 떴네</button>
+    <button class="nav-btn" data-target="song-gohigh">Go High</button>
     <button class="nav-btn" data-target="song-ggb">GGB 지지배</button>
     <button class="nav-btn" data-target="song-bout">'Bout You</button>
-    <button class="nav-btn" data-target="song-oppa">Oppa Oppa</button>
     <button class="nav-btn" data-target="song-cali">California Love</button>
-    <button class="nav-btn" data-target="song-perfect">太完美</button>
     <button class="nav-btn" data-target="song-elf">我們是 E.L.F.</button>
   </div>
 </nav>
@@ -791,6 +778,147 @@
         저기 막 떴네<br>
         What you want from me Aye<br>
         해 떴네 uh
+      </p>
+    </div>
+  </article>
+
+  <!-- ===== Go High ===== -->
+  <article class="song" id="song-gohigh">
+    <div class="song-header">
+      <h1 class="song-title">Go High</h1>
+    </div>
+
+    <div class="video-section open">
+      <button class="video-toggle" onclick="toggleVideo(this)">
+        <div class="video-toggle-left">
+          <div class="video-icon">▶</div>
+          <div>
+            <span class="video-label">Go High 應援教學影片</span>
+          </div>
+        </div>
+        <span class="video-arrow">▼</span>
+      </button>
+      <div class="video-content">
+        <div class="video-grid">
+          <div class="video-item">
+            <span class="video-tag youtube">▶ YouTube</span>
+            <div class="video-iframe-wrap">
+              <iframe data-src="https://www.youtube.com/embed/M5VzYYgWF5U" title="Go High 應援教學" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+          <div class="video-item">
+            <span class="video-tag youtube">▶ YouTube ・ 韓文小教室</span>
+            <div class="video-iframe-wrap">
+              <iframe data-src="https://www.youtube.com/embed/STj5YJNkQlc" title="Go High 韓文小教室" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="lyrics">
+      <p class="stanza">
+        나 미쳐 I think so<br>
+        누울 시간도 없어 일에 미쳐<br>
+        어느새 CEO 이 자린 달러 싸움 마치 일보
+      </p>
+
+      <p class="stanza">
+        안 해본 거 해보라서 <span class="vocal">다해보는 중 (踏嘿波嫩 揪)</span><br>
+        아이 폰으로 고화질 널 <span class="vocal">땡겨보는 중 (顛歌波嫩 揪)</span><br>
+        봉은사 앞 Bike 타고 nike 신는 중 <span class="vocal">nike 신는 중 (nike 新嫩 揪)</span>
+      </p>
+
+      <p class="stanza">
+        Uh 빨리 시동 켜 Beat Drop해 <span class="cheer">(drop해)(drop 沛)</span><br>
+        Two choices D&E yeah<br>
+        And ma class 보면 <span class="vocal">Hot해 (Hot ㄊㄟˋ)</span><br>
+        얼굴이 Young 해도 위아래로 <span class="vocal">꺅해 (kkya kae)</span><br>
+        칵테일 콕테일 다 골라 <span class="vocal">shot해 (shotㄊㄟˋ)</span><br>
+        하루 숙취는 날 보고 <span class="vocal">탓해 (踏ㄊㄟˋ)</span><br>
+        흐름 따라가 내 분위기는 <span class="vocal">어때 (歐爹)</span><br>
+        아무거나 섞어 마시면 다 <span class="vocal">칵테일 (咖ㄊㄟˋ伊)</span>
+      </p>
+
+      <p class="stanza">
+        안 해본 거 해보라서 <span class="vocal">다해보는 중 (踏嘿波嫩 揪)</span><br>
+        아이폰으로 고화질 널 <span class="vocal">땡겨보는 중 (顛歌波嫩 揪)</span><br>
+        봉은사 앞 Bike 타고 nike 신는 중 <span class="vocal">nike 신는 중 (nike 新嫩 揪)</span>
+      </p>
+
+      <p class="stanza">
+        안 해본 거 해보라서 <span class="vocal">다해보는 중 (踏嘿波嫩 揪)</span><br>
+        아이폰으로 고화질 널 <span class="vocal">땡겨보는 중 (顛歌波嫩 揪)</span><br>
+        봉은사 앞 bike 타고 nike 신는 중 <span class="vocal">땡겨보는 중 (顛歌波嫩 揪)</span><br>
+        거기 거기 <span class="vocal">(Bad Bad)</span><br>
+        거기 거기 <span class="vocal">(Bad Bad)</span><br>
+        거기 거기 (That's right)<br>
+        거기 거기<br>
+        거기 거기 <span class="vocal">(Bad Bad)</span><br>
+        거기 거기 <span class="vocal">(Bad Bad)</span><br>
+        거기 거기 거기 거기<br>
+        거기 거기 <span class="vocal">(Bad Bad)</span><br>
+        거기 거기 <span class="vocal">(Bad Bad)</span><br>
+        거기 거기 거기 거기<br>
+        거기 거기 <span class="vocal">(Bad Bad)</span><br>
+        거기 거기 거기 거기
+      </p>
+
+      <p class="stanza">
+        Ready action camera 번쩍<br>
+        ODE lifestyle <span class="cheer">(D&E)</span><br>
+        턱 들어 다리 떨어 섹시한 Pose <span class="cheer">(Go High 이) (Go High 伊)</span><br>
+        We started Move your body<br>
+        Ready action camera 번쩍<br>
+        ODE lifestyle One
+      </p>
+
+      <p class="stanza">
+        걸어가는 길 길 uh 무대 위<br>
+        내가 빠지면 허전한 빈자리<br>
+        올라가는 기분 쩔어<br>
+        채워지는 게이지에<br>
+        리더 자리 비워 Kings보단 Aces
+      </p>
+
+      <p class="stanza">
+        안 해본 거 해보라서 <span class="vocal">다해보는 중 (踏嘿波嫩 揪)</span><br>
+        아이폰으로 고화질 널 <span class="vocal">땡겨보는 중 (顛歌波嫩 揪)</span><br>
+        봉은사 앞 Bike 타고 nike 신는 중 <span class="vocal">땡겨보는 중 (顛歌波嫩 揪)</span><br>
+        거기 거기 <span class="vocal">(Bad Bad)</span><br>
+        거기 거기 <span class="vocal">(Bad Bad)</span><br>
+        거기 거기 (That's right)<br>
+        거기 거기<br>
+        거기 거기 <span class="vocal">(Bad Bad)</span><br>
+        거기 거기 <span class="vocal">(Bad Bad)</span><br>
+        거기 거기 거기 거기<br>
+        거기 거기 <span class="vocal">(Bad Bad)</span><br>
+        거기 거기 <span class="vocal">(Bad Bad)</span><br>
+        거기 거기 거기 거기<br>
+        거기 거기 <span class="vocal">(Bad Bad)</span><br>
+        거기 거기 거기 거기
+      </p>
+
+      <p class="stanza">
+        <span class="vocal">D-O-N-G-H-A-E</span><br>
+        <span class="vocal">E-U-N-H-Y-U-K</span><br>
+        <span class="vocal">월 화 수 목 금 토 일 (窩 花 蘇 摸 坑 偷 伊)</span><br>
+        <span class="vocal">여기 저기 거기 D&E Game Time</span><br>
+         <span class="vocal">(呦機 邱機 摳機 D&E Game Time)</span>
+      </p>
+
+      <p class="stanza">
+        <span class="vocal">I Go High Game Time</span><br>
+        우리 미모 아무도 못 말려<br>
+        <span class="vocal">You Go High Follow me</span><br>
+        우리 미소에 정신 못 차려
+      </p>
+
+      <p class="stanza">
+        <span class="vocal">I Go High Game Time</span><br>
+        우리 미모 아무도 못 말려<br>
+        <span class="vocal">You Go High Follow me</span><br>
+        우리 미소에 정신 못 차려
       </p>
     </div>
   </article>
@@ -1048,113 +1176,6 @@
     </div>
   </article>
 
-  <!-- ===== Oppa Oppa ===== -->
-  <article class="song" id="song-oppa">
-    <div class="song-header">
-      <h1 class="song-title">Oppa, Oppa</h1>
-    </div>
-
-    <div class="video-section open">
-      <button class="video-toggle" onclick="toggleVideo(this)">
-        <div class="video-toggle-left">
-          <div class="video-icon">▶</div>
-          <div>
-            <span class="video-label">Oppa, Oppa 應援教學影片</span>
-          </div>
-        </div>
-        <span class="video-arrow">▼</span>
-      </button>
-      <div class="video-content">
-        <div class="video-grid">
-          <div class="video-item">
-            <span class="video-tag youtube">▶ YouTube</span>
-            <div class="video-iframe-wrap">
-              <iframe data-src="https://www.youtube.com/embed/Et-XJ71l86A" title="Oppa Oppa 應援教學" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="lyrics">
-      <p class="stanza">
-        Ah, Ah,하나,둘,셋. Welcome to the Super Show! <span class="vocal">Let's Go~!!</span><br>
-        My name is DongHae. Let's party tonight!!<span class="cheer">(싸! 싸!)(薩！薩！)</span>
-      </p>
-
-      <p class="stanza">
-        그대의 마음에 불을 질러<span class="cheer">(질러)(季漏)</span> 내가 원조 여자 킬러<span class="cheer">(킬러)(key漏)</span><br>
-        문자 썼다 지웠다가 썼다 지웠다가 하게 확 꼬셔 볼라<br>
-        밤에 잠 못 자게 미치도록 가만두지 않아<br>
-        나를 말릴 생각 하지 마라 그러다가 다친다
-      </p>
-
-      <p class="stanza">
-        <span class="vocal">아싸(啊薩)</span> 삘 받았어 밤새도록 달릴까 A SA<br>
-        누굴 내 맘대로 밤새 불을 지를까<br>
-        <span class="vocal">Hey</span> won't you take me to funky town<br>
-        I'm international Baby 1,2,3 <span class="vocal">Let's go</span>
-      </p>
-
-      <p class="stanza">
-        내가 떴다 하면 다 외쳐 <span class="vocal">오빠</span>, <span class="vocal">오빠</span>.<span class="vocal">(歐巴)(歐巴)</span><br>
-        Tokyo, London, New York, Paris, <span class="vocal">오빠</span>, <span class="vocal">오빠</span>.<span class="vocal">(歐巴)(歐巴)</span><br>
-        I'm so cool, I'm so cool, Party like a superstar,<br>
-        이쁜이들 다 모여라 떴다 <span class="vocal">오빠</span>, <span class="vocal">오빠</span>.<span class="vocal">(歐巴)(歐巴)</span>
-      </p>
-
-      <p class="stanza">
-        이리저리 이쁜이 있는 곳에 가서 <span class="vocal">(HOLLA)</span><br>
-        요리조리 다니면서 Shawty Shawty <span class="vocal">(HOLLA)</span><br>
-        오빠오빠 라고 다 불러 난 국제적인 <span class="vocal">오빠 (歐巴)</span><br>
-        집에 가지마 라고 하지마 난 모든 이의 <span class="vocal">오빠 (歐巴)</span>
-      </p>
-
-      <p class="stanza">
-        <span class="vocal">아싸(啊薩)</span> 기분 좋다 오늘 계속 달릴까<br>
-        누굴 내 맘대로 밤새 불을 지를까<br>
-        <span class="vocal">Hey</span> won't you take me to funky town<br>
-        I'm international Baby 1,2,3 Let's go
-      </p>
-
-      <p class="stanza">
-        내가 떴다 하면 다 외쳐 <span class="vocal">오빠</span>, <span class="vocal">오빠</span>.<span class="vocal">(歐巴)(歐巴)</span><br>
-        Tokyo, London, New York, Paris, <span class="vocal">오빠</span>, <span class="vocal">오빠</span>.<span class="vocal">(歐巴)(歐巴)</span><br>
-        I'm so cool, I'm so cool, Party like a superstar,<br>
-        이쁜이들 다 모여라 떴다 <span class="vocal">오빠</span>, <span class="vocal">오빠</span>.<span class="vocal">(歐巴)(歐巴)</span>
-      </p>
-
-      <p class="stanza">
-        내가 떴다 하면 다 외쳐 <span class="vocal">오빠</span>, <span class="vocal">오빠</span>.<span class="vocal">(歐巴)(歐巴)</span><br>
-        Tokyo, London, New York, Paris, <span class="vocal">오빠</span>, <span class="vocal">오빠</span>.<span class="vocal">(歐巴)(歐巴)</span><br>
-        I'm so cool, I'm so cool, Party like a superstar,<br>
-        이쁜이들 다 모여라 떴다 <span class="vocal">오빠</span>, <span class="vocal">오빠</span>.<span class="vocal">(歐巴)(歐巴)</span>
-      </p>
-
-      <p class="stanza">
-        I say Dong Hae,  you say 오빠, Dong Hae <span class="cheer">(오빠)(歐巴)</span> <br>
-        Dong Hae <span class="cheer">(오빠)(歐巴)</span><br>
-            I say Eun Hyuk,  you say 오빠, Eun Hyuk <span class="cheer">(오빠)(歐巴)</span> <br>
-                                               Eun Hyuk <span class="cheer">(오빠)(歐巴)</span> <br>
-            I say SU JU,  you say 오빠, SU JU <span class="cheer">(오빠)(歐巴)</span> SU JU <span class="cheer">(오빠) (歐巴)</span>
-      </p>
-
-      <p class="stanza">
-        내가 떴다 하면 다 외쳐 <span class="vocal">오빠</span>, <span class="vocal">오빠</span>.<span class="vocal">(歐巴)(歐巴)</span><br>
-        Tokyo, London, New York, Paris, <span class="vocal">오빠</span>, <span class="vocal">오빠</span>.<span class="vocal">(歐巴)(歐巴)</span><br>
-        I'm so cool, I'm so cool, Party like a superstar,<br>
-        이쁜이들 다 모여라 떴다 <span class="vocal">오빠</span>, <span class="vocal">오빠</span>.<span class="vocal">(歐巴)(歐巴)</span>
-      </p>
-
-      <p class="stanza">
-        내가 떴다 하면 다 외쳐 <span class="vocal">오빠</span>, <span class="vocal">오빠</span>.<span class="vocal">(歐巴)(歐巴)</span><br>
-        Tokyo, London, New York, Paris, <span class="vocal">오빠</span>, <span class="vocal">오빠</span>.<span class="vocal">(歐巴)(歐巴)</span><br>
-        I'm so cool, I'm so cool, Party like a superstar,<br>
-        이쁜이들 다 모여라 떴다 <span class="vocal">오빠</span>, <span class="vocal">오빠</span>.<span class="vocal">(歐巴)(歐巴)</span>
-      </p>
-    </div>
-  </article>
-
   <!-- ===== California Love ===== -->
   <article class="song" id="song-cali">
     <div class="song-header">
@@ -1310,145 +1331,6 @@
         뜨겁게 불탈 우리 밤 Uh Yeah<br>
         <span class="vocal">Real Light Savage Light</span><br>
         I just feel like I’m in paradise
-      </p>
-    </div>
-  </article>
-
-  <!-- ===== 太完美 ===== -->
-  <article class="song" id="song-perfect">
-    <div class="song-header">
-      <h1 class="song-title">太完美</h1>
-    </div>
-
-    <div class="video-section open">
-      <button class="video-toggle" onclick="toggleVideo(this)">
-        <div class="video-toggle-left">
-          <div class="video-icon">▶</div>
-          <div>
-            <span class="video-label">太完美 應援教學影片</span>
-          </div>
-        </div>
-        <span class="video-arrow">▼</span>
-      </button>
-      <div class="video-content">
-        <div class="video-grid">
-          <div class="video-item">
-            <span class="video-tag youtube">▶ YouTube</span>
-            <div class="video-iframe-wrap">
-              <iframe data-src="https://www.youtube.com/embed/Dl2xYVHAg9A" title="太完美 應援教學" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="lyrics">
-      <p class="stanza">
-        她迷住我視線   她迷住我視線
-      </p>
-
-      <p class="stanza">
-        在愛情裡的寶藏被我發現<span class="cheer">  (이동해)(李東海)</span><br>
-        你就是我尋找的稀世寶貝<br>
-        你就不斷地在正反我世界 <span class="cheer"> (이동해)(李東海)</span><br>
-        連冰塊遇見你都燃起火焰
-      </p>
-
-      <p class="stanza">
-        太過心急不對<span class="cheer">(不對)</span><br>
-        用力愛會碎<br>
-        太過緩慢不對<span class="cheer">(不對)</span><br>
-        我隨你進或退
-      </p>
-
-      <p class="stanza">
-        oh 太完美 <span class="cheer">(슈주 M)(SUJU-M)</span><br>
-        你眼裡我出現<br>
-        oh不讓誰<span class="cheer">(太完美)</span><br>
-        替我在你身邊 <span class="vocal">Woo Wo u O</span><br>
-        你的眉眼 你的側臉 你的頸肩 你的嫵媚 你的一切 從頭到尾 <span class="vocal">我已淪陷</span>
-      </p>
-
-      <p class="stanza">
-        我的心變成了口袋的一面<span class="cheer"> (이동해)(李東海)</span><br>
-        Just for you 不停地給不停地給<br>
-        這樣子愛你到底是對不對 <span class="cheer"> (이동해)(李東海)</span><br>
-        我一邊迷惑一邊更加迷戀
-      </p>
-
-      <p class="stanza">
-        太過心急不對<span class="cheer">(不對)</span><br>
-        用力愛會碎<br>
-        太過緩慢不對<span class="cheer">(不對)</span><br>
-        我隨你進或退
-      </p>
-
-      <p class="stanza">
-        oh 太完美 <span class="cheer">(슈주 M)(SUJU-M)</span><br>
-        你眼裡我出現<br>
-        oh 不讓誰<span class="cheer"> (太完美)</span><br>
-        替我在你身邊  <span class="vocal">Woo Wo u O</span><br>
-        你的眉眼 你的側臉 你的頸肩 你的嫵媚 你的一切 從頭到尾 <span class="vocal">我已淪陷</span>
-      </p>
-
-      <p class="stanza">
-        間奏 oh太完美  oh不讓誰  oh太完美<br>
-        <span class="cheer">(이동해！이동해！이동해！이동해！이동해！이동해！이동해！이동해！</span><br>
-        <span class="cheer">사랑해요 슈주 M！완전대박 슈주 M！슈 퍼 주 니 어 M 太 完 美！)</span><br>
-        <span class="cheer">(李東海！李東海！李東海！李東海！李東海！李東海！李東海！李東海！</span><br>
-        <span class="cheer">莎郎嘿唷 SUJU-M！完炯TE吧 SUJU-M！ SUPER JUNIOR-M 太 完 美！</span>
-      </p>
-
-      <p class="stanza">
-        每次見面是脈搏就當機了 它在我全身狂跳不由己
-      </p>
-
-      <p class="stanza">
-        一直跳 一直跳 <span class="vocal">想見你</span><br>
-        一直跳 一直跳 <span class="vocal">喜歡你</span><br>
-        一直跳 一直跳 <span class="vocal">都是你</span><br>
-        一直跳 一直跳 <span class="vocal">我愛你</span><br>
-        一直跳 一直跳 一直跳 一直跳
-      </p>
-
-      <p class="stanza">
-        太過心急不對<span class="cheer">(不對)</span><br>
-        用力愛會碎<br>
-        太過緩慢不對<span class="cheer">(不對)</span><br>
-        我隨你進或退
-      </p>
-
-      <p class="stanza">
-        oh 太完美 <span class="cheer">(슈주 M)(SUJU-M)</span><br>
-        你眼裡我出現<br>
-        oh 不讓誰<span class="cheer">(太完美)</span><br>
-        替我在你身邊 <span class="vocal">Woo Wo u O</span><br>
-        你的眉眼 你的側臉 你的頸肩 你的嫵媚 你的一切 從頭到尾 <span class="vocal">我已淪陷</span>
-      </p>
-
-      <p class="stanza">
-        Bounce to the music, let your feet go round<br>
-        To the floor and I'ma break it down<br>
-        Let me in, let me show you, all my bling, bling<br>
-        And all my kiss, kiss, baby, dance with me<br>
-        <span class="vocal">Boom, boom, boom</span><br>
-        Can I get another? <span class="vocal">Clap, clap, clap</span>, let's go<br>
-        Shake your body, move your body, pick your feet up<br>
-        I'ma move to the groove, baby, I'ma go all out (yeah-yeah)
-      </p>
-
-      <p class="stanza">
-        給我說你想我<span class="cheer">(我想你)</span><br>
-        給我說你愛我<span class="cheer">(我愛你)</span><br>
-        給我說你想我 給我說你想我<br>
-        給我說你愛我<span class="cheer">(我愛你)</span>Yeah~~
-      </p>
-
-      <p class="stanza">
-        給我說你想我<span class="cheer">(我想你)</span><br>
-        給我說你愛我<span class="cheer">(我愛你)</span><br>
-        給我說你想我  給我說你想我<br>
-        給我說你愛我 <span class="cheer">(슈 퍼 주 니 어 M) (SUPER JUNIOR-M)</span>
       </p>
     </div>
   </article>
