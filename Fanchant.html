@@ -421,6 +421,22 @@
   .video-item{
     display:flex;flex-direction:column;
   }
+  .video-tag-row{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-bottom:10px;
+  }
+  .video-tag-row .video-tag{
+    margin-bottom:0;
+  }
+  .video-note{
+    font-size:12px;
+    color:var(--pink-hot);
+    font-weight:500;
+    letter-spacing:.02em;
+  }
   .video-tag{
     display:inline-flex;align-items:center;gap:6px;
     align-self:flex-start;
@@ -632,7 +648,7 @@
     /* 手機版導覽列：兩排 grid */
     .nav-inner{
       display:grid;
-      grid-template-columns:repeat(3, 1fr);
+      grid-template-columns:repeat(4, 1fr);
       gap:8px;
       overflow-x:visible;
       padding:0 16px;
@@ -656,7 +672,7 @@
 
     <div class="hero-btn-row-wrap">
       <div class="btn-row-inner">
-        <a href="https://drive.google.com/drive/folders/1nep5LHhhoVlLrpAfEneCbE5zOJoSaiaa?usp=sharing" target="_blank" rel="noopener noreferrer" class="mp3-btn">
+        <a href="https://drive.google.com/drive/folders/1gMjjkBlgKrn51OkASznjX9_c-x9A8irS?usp=sharing" target="_blank" rel="noopener noreferrer" class="mp3-btn">
           <span class="mp3-icon">🎧</span>
           <span>應援口號 MP3 下載</span>
           <span class="mp3-arrow">↗</span>
@@ -679,6 +695,8 @@
 
     <div class="note">
       🌸 <strong>注意事項</strong>　本頁所有應援口號、歌詞、教學影片均轉載自網路公開資源，著作權皆屬原作者及版權方所有。本頁僅作為粉絲應援用途整理，<strong>非商業使用</strong>。讓我們一起為東海加油！ 🩷
+      <br><br>
+      📝 <strong>應援詞調整說明</strong>　由於本場為東海個人演唱會，部分歌曲（如 Go High、Danger、'Bout You）原版 D&E 應援詞中的喊名，文字皆已調整為東海專屬版「<strong>D-O-N-G-H-A-E、이동해（Lee Dong Hae）</strong>」，讓我們一起為東海熱情應援 🩵！
     </div>
   </div>
 </section>
@@ -686,10 +704,11 @@
 <nav class="nav" id="nav">
   <div class="nav-inner" id="navInner">
     <button class="nav-btn active" data-target="song-haetnae">해 떴네</button>
+    <button class="nav-btn" data-target="song-cali">California Love</button>
     <button class="nav-btn" data-target="song-gohigh">Go High</button>
     <button class="nav-btn" data-target="song-ggb">GGB 지지배</button>
+    <button class="nav-btn" data-target="song-danger">Danger</button>
     <button class="nav-btn" data-target="song-bout">'Bout You</button>
-    <button class="nav-btn" data-target="song-cali">California Love</button>
     <button class="nav-btn" data-target="song-elf">我們是 E.L.F.</button>
   </div>
 </nav>
@@ -822,399 +841,6 @@
     </div>
   </article>
 
-  <!-- ===== Go High ===== -->
-  <article class="song" id="song-gohigh">
-    <div class="song-header">
-      <h1 class="song-title">Go High</h1>
-    </div>
-
-    <div class="video-section open">
-      <button class="video-toggle" onclick="toggleVideo(this)">
-        <div class="video-toggle-left">
-          <div class="video-icon">▶</div>
-          <div>
-            <span class="video-label">Go High 應援教學影片</span>
-          </div>
-        </div>
-        <span class="video-arrow">▼</span>
-      </button>
-      <div class="video-content">
-        <div class="video-grid">
-          <div class="video-item">
-            <span class="video-tag youtube">▶ YouTube</span>
-            <div class="video-iframe-wrap">
-              <iframe data-src="https://www.youtube.com/embed/M5VzYYgWF5U" title="Go High 應援教學" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
-            </div>
-          </div>
-          <div class="video-item">
-            <span class="video-tag youtube">▶ YouTube ・ 韓文小教室</span>
-            <div class="video-iframe-wrap">
-              <iframe data-src="https://www.youtube.com/embed/STj5YJNkQlc" title="Go High 韓文小教室" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="lyrics">
-      <p class="stanza">
-        나 미쳐 I think so<br>
-        누울 시간도 없어 일에 미쳐<br>
-        어느새 CEO 이 자린 달러 싸움 마치 일보
-      </p>
-
-      <p class="stanza">
-        안 해본 거 해보라서 <span class="vocal">다해보는 중 (踏嘿波嫩 揪)</span><br>
-        아이 폰으로 고화질 널 <span class="vocal">땡겨보는 중 (顛歌波嫩 揪)</span><br>
-        봉은사 앞 Bike 타고 nike 신는 중 <span class="vocal">nike 신는 중 (nike 新嫩 揪)</span>
-      </p>
-
-      <p class="stanza">
-        Uh 빨리 시동 켜 Beat Drop해 <span class="cheer">(drop해)(drop 沛)</span><br>
-        Two choices D&E yeah<br>
-        And ma class 보면 <span class="vocal">Hot해 (Hot ㄊㄟˋ)</span><br>
-        얼굴이 Young 해도 위아래로 <span class="vocal">꺅해 (kkya kae)</span><br>
-        칵테일 콕테일 다 골라 <span class="vocal">shot해 (shotㄊㄟˋ)</span><br>
-        하루 숙취는 날 보고 <span class="vocal">탓해 (踏ㄊㄟˋ)</span><br>
-        흐름 따라가 내 분위기는 <span class="vocal">어때 (歐爹)</span><br>
-        아무거나 섞어 마시면 다 <span class="vocal">칵테일 (咖ㄊㄟˋ伊)</span>
-      </p>
-
-      <p class="stanza">
-        안 해본 거 해보라서 <span class="vocal">다해보는 중 (踏嘿波嫩 揪)</span><br>
-        아이폰으로 고화질 널 <span class="vocal">땡겨보는 중 (顛歌波嫩 揪)</span><br>
-        봉은사 앞 Bike 타고 nike 신는 중 <span class="vocal">nike 신는 중 (nike 新嫩 揪)</span>
-      </p>
-
-      <p class="stanza">
-        안 해본 거 해보라서 <span class="vocal">다해보는 중 (踏嘿波嫩 揪)</span><br>
-        아이폰으로 고화질 널 <span class="vocal">땡겨보는 중 (顛歌波嫩 揪)</span><br>
-        봉은사 앞 bike 타고 nike 신는 중 <span class="vocal">땡겨보는 중 (顛歌波嫩 揪)</span><br>
-        거기 거기 <span class="vocal">(Bad Bad)</span><br>
-        거기 거기 <span class="vocal">(Bad Bad)</span><br>
-        거기 거기 (That's right)<br>
-        거기 거기<br>
-        거기 거기 <span class="vocal">(Bad Bad)</span><br>
-        거기 거기 <span class="vocal">(Bad Bad)</span><br>
-        거기 거기 거기 거기<br>
-        거기 거기 <span class="vocal">(Bad Bad)</span><br>
-        거기 거기 <span class="vocal">(Bad Bad)</span><br>
-        거기 거기 거기 거기<br>
-        거기 거기 <span class="vocal">(Bad Bad)</span><br>
-        거기 거기 거기 거기
-      </p>
-
-      <p class="stanza">
-        Ready action camera 번쩍<br>
-        ODE lifestyle <span class="cheer">(D&E)</span><br>
-        턱 들어 다리 떨어 섹시한 Pose <span class="cheer">(Go High 이) (Go High 伊)</span><br>
-        We started Move your body<br>
-        Ready action camera 번쩍<br>
-        ODE lifestyle One
-      </p>
-
-      <p class="stanza">
-        걸어가는 길 길 uh 무대 위<br>
-        내가 빠지면 허전한 빈자리<br>
-        올라가는 기분 쩔어<br>
-        채워지는 게이지에<br>
-        리더 자리 비워 Kings보단 Aces
-      </p>
-
-      <p class="stanza">
-        안 해본 거 해보라서 <span class="vocal">다해보는 중 (踏嘿波嫩 揪)</span><br>
-        아이폰으로 고화질 널 <span class="vocal">땡겨보는 중 (顛歌波嫩 揪)</span><br>
-        봉은사 앞 Bike 타고 nike 신는 중 <span class="vocal">땡겨보는 중 (顛歌波嫩 揪)</span><br>
-        거기 거기 <span class="vocal">(Bad Bad)</span><br>
-        거기 거기 <span class="vocal">(Bad Bad)</span><br>
-        거기 거기 (That's right)<br>
-        거기 거기<br>
-        거기 거기 <span class="vocal">(Bad Bad)</span><br>
-        거기 거기 <span class="vocal">(Bad Bad)</span><br>
-        거기 거기 거기 거기<br>
-        거기 거기 <span class="vocal">(Bad Bad)</span><br>
-        거기 거기 <span class="vocal">(Bad Bad)</span><br>
-        거기 거기 거기 거기<br>
-        거기 거기 <span class="vocal">(Bad Bad)</span><br>
-        거기 거기 거기 거기
-      </p>
-
-      <p class="stanza">
-        <span class="vocal">D-O-N-G-H-A-E</span><br>
-        <span class="vocal">D-O-N-G-H-A-E</span><br>
-        <span class="vocal">월 화 수 목 금 토 일 (窩 花 蘇 摸 坑 偷 伊)</span><br>
-        <span class="vocal">여기 저기 거기 D&E Game Time</span><br>
-         <span class="vocal">(呦機 邱機 摳機 D&E Game Time)</span>
-      </p>
-
-      <p class="stanza">
-        <span class="vocal">I Go High Game Time</span><br>
-        우리 미모 아무도 못 말려<br>
-        <span class="vocal">You Go High Follow me</span><br>
-        우리 미소에 정신 못 차려
-      </p>
-
-      <p class="stanza">
-        <span class="vocal">I Go High Game Time</span><br>
-        우리 미모 아무도 못 말려<br>
-        <span class="vocal">You Go High Follow me</span><br>
-        우리 미소에 정신 못 차려
-      </p>
-    </div>
-  </article>
-
-  <!-- ===== GGB ===== -->
-  <article class="song" id="song-ggb">
-    <div class="song-header">
-      <h1 class="song-title">GGB 지지배</h1>
-    </div>
-
-    <div class="video-section open">
-      <button class="video-toggle" onclick="toggleVideo(this)">
-        <div class="video-toggle-left">
-          <div class="video-icon">▶</div>
-          <div>
-            <span class="video-label">GGB 지지배 應援教學影片</span>
-          </div>
-        </div>
-        <span class="video-arrow">▼</span>
-      </button>
-      <div class="video-content">
-        <div class="video-grid">
-          <div class="video-item">
-            <span class="video-tag youtube">▶ YouTube</span>
-            <div class="video-iframe-wrap">
-              <iframe data-src="https://www.youtube.com/embed/zw-S3wILmMU" title="GGB 응원법 教學" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="lyrics">
-      <p class="stanza">
-        <span class="cheer">SUPER JUNIOR D&E GO</span>
-      </p>
-
-      <p class="stanza">
-        계절이 지나 또 다른 온도 <span class="cheer">(다른 온도) (搭愣翁豆)</span><br>
-        여전히 마음은 네게 가 있어 <span class="cheer">(가 있어) (嘎以搜)</span><br>
-        너와 내가 머물던 지난 timeline<br>
-        어떻게 내가 잊겠어 나 혼자 여기서<br>
-        Yeah 어떻게 지내니?
-      </p>
-
-      <p class="stanza">
-        나는 혼자 잘 지냈어 <span class="cheer">(혼자 잘 지냈어)(紅家 才 及內搜)</span><br>
-        문득 네 생각에 살짝 정신이 나갔어 <span class="cheer">(정신이 나갔어)(窮星尼 那嘎搜)</span><br>
-        네가 없는 이곳에 oasis는 없어 <span class="cheer">(Hey, Hey)</span><br>
-        며칠째 목말라 절레절레 내려줘 단비
-      </p>
-
-      <p class="stanza">
-        <span class="vocal">우리 그때의(嗚利 苦得誒) Memory</span> <br>
-        <span class="vocal">더 늦기 전에(偷 ne gi 秋內) I'm sorry</span>
-      </p>
-
-      <p class="stanza">
-        네가 있는 곳은 어디<span class="cheer">(어디)(歐低)</span><br>
-        날 데려가 줘 빨리 <span class="cheer">(빨리)(八力)</span><br>
-        좀 벗어나자 둘이<span class="cheer">(둘이)(杜力)</span> <br>
-        내 손 잡아 <span class="vocal">We can fly</span>
-      </p>
-
-      <p class="stanza">
-        네 생각에 불 켜는 밤 <span class="cheer">(이 밤에)(以半美)</span><br>
-        끝을 몰라 뒤척이는 나 <span class="cheer">(So lonely)</span><br>
-        너 없이도 잘 돌아가는 밤 <span class="cheer">(밤, 밤)(邦邦)</span><br>
-        좀 슬퍼도 어쩌겠어 지켜볼게 멀리서
-      </p>
-
-      <p class="stanza">
-        너무 예쁜 입술에 <span class="cheer">(입 맞추던 네 모습에)(衣嘛 秋登 內某素杯)</span><br>
-        같이 보던 무지개 <span class="cheer">(무지개 같은 입술에)(木吉給 嘎登 衣素內)</span><br>
-        떠나간 네 모습에 <span class="cheer">(모습 Bae Bae)(某素杯杯)</span><br>
-        좀 슬퍼도 어쩌겠어 지켜볼게 멀리서
-      </p>
-
-      <p class="stanza">
-        아직도<br>
-        넌 나만의 bucket list<br>
-        매일 같이 듣던 음악은 아직 playlist에<br>
-        우리 story의 장르는 romance가 아냐<br>
-        Fantasy가 섞인 action<br>
-        복잡한 scenario
-      </p>
-
-      <p class="stanza">
-        딴 생각 안 나 I'm fallin' <span class="cheer">(fallin')</span><br>
-        너와 같이 있는 love story <span class="cheer">(story)</span><br>
-        잊지 못해 널 기다리고 있어
-      </p>
-
-      <p class="stanza">
-        네가 있는 곳은 어디<span class="cheer">(어디)(歐低)</span><br>
-        날 데려가 줘 빨리 <span class="cheer">(빨리)(八力)</span><br>
-        좀 벗어나자 둘이<span class="cheer">(둘이)(杜力)</span> <br>
-        내 손 잡아 <span class="vocal">We can fly</span>
-      </p>
-
-      <p class="stanza">
-        네 생각에 불 켜는 밤 <span class="cheer">(이 밤에)(以半美)</span><br>
-        끝을 몰라 뒤척이는 나 <span class="cheer">(So lonely)</span><br>
-        너 없이도 잘 돌아가는 밤 <span class="cheer">(밤, 밤)(邦邦)</span>
-      </p>
-
-      <p class="stanza">
-        너무 예쁜 입술에 <span class="cheer">(입 맞추던 네 모습에)(衣嘛 秋登 內某素杯)</span><br>
-        같이 보던 무지개 <span class="cheer">(무지개 같은 입술에)(木吉給 嘎登 衣素內)</span><br>
-        떠나 간네 모습에 <span class="cheer">(모습 Bae Bae)(某素杯杯)</span><br>
-        좀 슬퍼도 어쩌겠어 지켜볼게 멀리서
-      </p>
-
-      <p class="stanza">
-        계절이 지나 또 다른 온도 <span class="cheer">(다른 온도) (搭愣翁豆)</span><br>
-        여전히 마음은 네게 가 있어 <span class="cheer">(가 있어) (嘎以搜)</span><br>
-        네가 있는 곳은 어디<span class="cheer">(어디)(歐低)</span><br>
-        날 데려가 줘 빨리 <span class="cheer">(빨리)(八力)</span><br>
-        좀 벗어나자 둘이<span class="cheer">(둘이)(杜力)</span> <br>
-        내 손 잡아 <span class="vocal">We can fly</span>
-      </p>
-
-      <p class="stanza">
-        <span class="cheer">D&E GO!</span>
-      </p>
-
-      <p class="stanza">
-        잠시 머물러간 사랑이었나?<br>
-        우리 인연 여기까지였나?<br>
-        그 예쁜 미소 다신 볼 수는 없나? Yeah<br>
-        외로운 내 맘에 잠깐 와줄 순 없나
-      </p>
-
-      <p class="stanza">
-        너무 예쁜 입술에  <span class="cheer">(입 맞추던 네 모습에)(衣嘛 秋登 內某素杯)</span><br>
-        같이 보던 무지개 <span class="cheer">(무지개 같은 입술에)(木吉給 嘎登 衣素內)</span><br>
-        떠나 간네 모습에 <span class="cheer">(모습 Bae Bae)(某素杯杯)</span><br>
-        좀 슬퍼도 어쩌겠어 지켜볼게 멀리서
-      </p>
-    </div>
-  </article>
-
-  <!-- ===== 'Bout You ===== -->
-  <article class="song" id="song-bout">
-    <div class="song-header">
-      <h1 class="song-title">'Bout You</h1>
-    </div>
-
-    <div class="video-section open">
-      <button class="video-toggle" onclick="toggleVideo(this)">
-        <div class="video-toggle-left">
-          <div class="video-icon">▶</div>
-          <div>
-            <span class="video-label">'Bout You 應援教學影片</span>
-          </div>
-        </div>
-        <span class="video-arrow">▼</span>
-      </button>
-      <div class="video-content">
-        <div class="video-grid">
-          <div class="video-item">
-            <span class="video-tag youtube">▶ YouTube</span>
-            <div class="video-iframe-wrap">
-              <iframe data-src="https://www.youtube.com/embed/lsey0aJlOI4" title="'Bout You 應援教學" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="lyrics">
-      <p class="stanza">
-        登登登登~登登登<span class="cheer">（SU! PER! JUNI! OR! D! N! E!）</span><br>
-        머리부터 발끝까지 <span class="cheer">【이 동 해】(Lee Dong Hae)</span><br>
-        너무 내게 눈이 부셔<span class="cheer">【이 혁 재】(Lee Hyuk Jae)</span>
-      </p>
-
-      <p class="stanza">
-        넌 참 짜릿짜릿해 가끔은 또 여리여리해<br>
-        시간이 갈수록 더 난 달려 너라는 방향의 Road<br>
-        북적북적한 <span class="vocal">거리(摳哩)</span> 같이 걸어볼까 <span class="vocal">우리(巫哩)</span><br>
-        난 네가 좋다면 <span class="vocal">Yeah</span> 그 어디든 갈 수 있어
-      </p>
-
-      <p class="stanza">
-        내 맘을 전부 설명할 수 조차 없어<br>
-        그냥 하는 말이 아니야<br>
-        너만 떠오르는 거야 <span class="vocal">Yeah</span><br>
-        I want to know you, Just all about you<br>
-        이유는 묻지 마 내게 그냥 답은 <span class="vocal">너야 (NO呀)</span>
-      </p>
-
-      <p class="stanza">
-        머리부터 발끝까지 <span class="cheer">(Wow Wow Wow Wow)</span><br>
-        너무 내게 눈이 부셔 <span class="cheer">(Sha La La La)</span><br>
-        너는 내게 공기 <span class="cheer">(Air Air)</span><br>
-        나를 보며 웃어줘 <span class="cheer">Yeah</span><br>
-        난 그걸로 충분해 <span class="cheer">Yeah</span>
-      </p>
-
-      <p class="stanza">
-        내가 찾던 사람 바로 너야<span class="cheer">【이 동 해】(Lee Dong Hae)</span>(All about you）<br>
-        네가 찾고 있는 사람 나야<span class="cheer">【이 혁 재】(Lee Hyuk Jae)</span>（All about you)<br>
-        I am just thinking all about <span class="vocal">you, you</span><br>
-        내가 같이하고 싶은 사람 너야  <span class="cheer">(D N E)</span> All about you
-      </p>
-
-      <p class="stanza">
-        너의 손을 잡고 나의 품 안에 Ye Ye<br>
-        거의 모든 날에 또 나의 순간엔 너 Ye<br>
-        눈이 부신 <span class="vocal">햇살(嘿沙)</span> 그보다 빛나던 나의 <span class="vocal">세상(誰尚)</span><br>
-        다시 데려가 <span class="vocal">줘요(揪喲)</span> 날아 다니게 해<span class="vocal">줘요(揪喲)</span><br>
-        너의 하늘에서 자유롭게
-      </p>
-
-      <p class="stanza">
-        넌 정말 쉽진 않아 내겐 참 어려워<br>
-        내 머리가 아니야 내 가슴이 널 불러 <span class="vocal">Yeah</span><br>
-        I want to know you, Just all about you<br>
-        이유는 묻지 마 내게 그냥 답은 <span class="vocal">너야 (NO呀 )</span>
-      </p>
-
-      <p class="stanza">
-        머리부터 발끝까지 <span class="cheer">(Wow Wow Wow Wow)</span><br>
-        너무 내게 눈이 부셔 <span class="cheer">(Sha La La La)</span><br>
-        너는 내게 공기 <span class="cheer">(Air, Air)</span><br>
-        나를 보며 웃어줘 <span class="vocal">Yeah</span><br>
-        난 그걸로 충분해 <span class="vocal">Yeah</span>
-      </p>
-
-      <p class="stanza">
-        내가 찾던 사람 바로 너야<span class="cheer">【이 혁 재】(Lee Hyuk Jae)</span>（All about you）<br>
-        네가 찾고 있는 사람 나야<span class="cheer">【이 동 해】(Lee Dong Hae)</span>（All about you）<br>
-        I am just thinking all about <span class="vocal">you, you</span><br>
-        내가 같이하고 싶은 사람 너야  <span class="cheer">(D N E)</span> All about you
-      </p>
-
-      <p class="stanza">
-        시간이 됐다 말해 같이 있고 싶다 말해<br>
-        또 다치고 아파도 난 너니까 라고 말해<br>
-        시간이 됐다 말해 같이 있고 싶다 말해<br>
-        또 다시 다치고 아파도 그래도 <span class="vocal">너니까 너니까 (弄你嘎 弄你嘎)</span> <span class="cheer">(D N E)</span>
-      </p>
-
-      <p class="stanza">
-        너란 여잔 나를 너무 몰라<br>
-        나란 남잔 이별을 아주 몰라<br>
-        쉽진 않아 내게 너라는 여잔<br>
-        그래도 난 계속 너이길 바래 난 바래<br>
-        내가 찾던 사람 바로 너야<span class="cheer">【머리부터】(摸力不偷)</span>（All about you）<br>
-        네가 찾고 있는 사람 나야<span class="cheer">【발끝까지】(怕更嘎季)</span>（All about you）<br>
-        I am just thinking all about <span class="vocal">you, you</span><br>
-        내가 같이하고 싶은 사람 너야 <span class="cheer">(D N E)</span> （All about you）
-      </p>
-    </div>
-  </article>
 
   <!-- ===== California Love ===== -->
   <article class="song" id="song-cali">
@@ -1375,6 +1001,487 @@
     </div>
   </article>
 
+
+  <!-- ===== Go High ===== -->
+  <article class="song" id="song-gohigh">
+    <div class="song-header">
+      <h1 class="song-title">Go High</h1>
+    </div>
+
+    <div class="video-section open">
+      <button class="video-toggle" onclick="toggleVideo(this)">
+        <div class="video-toggle-left">
+          <div class="video-icon">▶</div>
+          <div>
+            <span class="video-label">Go High 應援教學影片</span>
+          </div>
+        </div>
+        <span class="video-arrow">▼</span>
+      </button>
+      <div class="video-content">
+        <div class="video-grid">
+          <div class="video-item">
+            <div class="video-tag-row">
+              <span class="video-tag youtube">▶ YouTube</span>
+            </div>
+            <div class="video-iframe-wrap">
+              <iframe data-src="https://www.youtube.com/embed/M5VzYYgWF5U" title="Go High 應援教學" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+          <div class="video-item">
+            <span class="video-tag youtube">▶ YouTube ・ 韓文小教室</span>
+            <div class="video-iframe-wrap">
+              <iframe data-src="https://www.youtube.com/embed/STj5YJNkQlc" title="Go High 韓文小教室" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="lyrics">
+      <p class="stanza">
+        나 미쳐 I think so<br>
+        누울 시간도 없어 일에 미쳐<br>
+        어느새 CEO 이 자린 달러 싸움 마치 일보
+      </p>
+
+      <p class="stanza">
+        안 해본 거 해보라서 <span class="vocal">다해보는 중 (踏嘿波嫩 揪)</span><br>
+        아이 폰으로 고화질 널 <span class="vocal">땡겨보는 중 (顛歌波嫩 揪)</span><br>
+        봉은사 앞 Bike 타고 nike 신는 중 <span class="vocal">nike 신는 중 (nike 新嫩 揪)</span>
+      </p>
+
+      <p class="stanza">
+        Uh 빨리 시동 켜 Beat Drop해 <span class="cheer">(drop해)(drop 沛)</span><br>
+        Two choices D&E yeah<br>
+        And ma class 보면 <span class="vocal">Hot해 (Hot ㄊㄟˋ)</span><br>
+        얼굴이 Young 해도 위아래로 <span class="vocal">꺅해 (kkya kae)</span><br>
+        칵테일 콕테일 다 골라 <span class="vocal">shot해 (shotㄊㄟˋ)</span><br>
+        하루 숙취는 날 보고 <span class="vocal">탓해 (踏ㄊㄟˋ)</span><br>
+        흐름 따라가 내 분위기는 <span class="vocal">어때 (歐爹)</span><br>
+        아무거나 섞어 마시면 다 <span class="vocal">칵테일 (咖ㄊㄟˋ伊)</span>
+      </p>
+
+      <p class="stanza">
+        안 해본 거 해보라서 <span class="vocal">다해보는 중 (踏嘿波嫩 揪)</span><br>
+        아이폰으로 고화질 널 <span class="vocal">땡겨보는 중 (顛歌波嫩 揪)</span><br>
+        봉은사 앞 Bike 타고 nike 신는 중 <span class="vocal">nike 신는 중 (nike 新嫩 揪)</span>
+      </p>
+
+      <p class="stanza">
+        안 해본 거 해보라서 <span class="vocal">다해보는 중 (踏嘿波嫩 揪)</span><br>
+        아이폰으로 고화질 널 <span class="vocal">땡겨보는 중 (顛歌波嫩 揪)</span><br>
+        봉은사 앞 bike 타고 nike 신는 중 <span class="vocal">땡겨보는 중 (顛歌波嫩 揪)</span><br>
+        거기 거기 <span class="vocal">(Bad Bad)</span><br>
+        거기 거기 <span class="vocal">(Bad Bad)</span><br>
+        거기 거기 (That's right)<br>
+        거기 거기<br>
+        거기 거기 <span class="vocal">(Bad Bad)</span><br>
+        거기 거기 <span class="vocal">(Bad Bad)</span><br>
+        거기 거기 거기 거기<br>
+        거기 거기 <span class="vocal">(Bad Bad)</span><br>
+        거기 거기 <span class="vocal">(Bad Bad)</span><br>
+        거기 거기 거기 거기<br>
+        거기 거기 <span class="vocal">(Bad Bad)</span><br>
+        거기 거기 거기 거기
+      </p>
+
+      <p class="stanza">
+        Ready action camera 번쩍<br>
+        ODE lifestyle <span class="cheer">(D&E)</span><br>
+        턱 들어 다리 떨어 섹시한 Pose <span class="cheer">(Go High 이) (Go High 伊)</span><br>
+        We started Move your body<br>
+        Ready action camera 번쩍<br>
+        ODE lifestyle One
+      </p>
+
+      <p class="stanza">
+        걸어가는 길 길 uh 무대 위<br>
+        내가 빠지면 허전한 빈자리<br>
+        올라가는 기분 쩔어<br>
+        채워지는 게이지에<br>
+        리더 자리 비워 Kings보단 Aces
+      </p>
+
+      <p class="stanza">
+        안 해본 거 해보라서 <span class="vocal">다해보는 중 (踏嘿波嫩 揪)</span><br>
+        아이폰으로 고화질 널 <span class="vocal">땡겨보는 중 (顛歌波嫩 揪)</span><br>
+        봉은사 앞 Bike 타고 nike 신는 중 <span class="vocal">땡겨보는 중 (顛歌波嫩 揪)</span><br>
+        거기 거기 <span class="vocal">(Bad Bad)</span><br>
+        거기 거기 <span class="vocal">(Bad Bad)</span><br>
+        거기 거기 (That's right)<br>
+        거기 거기<br>
+        거기 거기 <span class="vocal">(Bad Bad)</span><br>
+        거기 거기 <span class="vocal">(Bad Bad)</span><br>
+        거기 거기 거기 거기<br>
+        거기 거기 <span class="vocal">(Bad Bad)</span><br>
+        거기 거기 <span class="vocal">(Bad Bad)</span><br>
+        거기 거기 거기 거기<br>
+        거기 거기 <span class="vocal">(Bad Bad)</span><br>
+        거기 거기 거기 거기
+      </p>
+
+      <p class="stanza">
+        <span class="vocal">D-O-N-G-H-A-E</span><br>
+        <span class="vocal">D-O-N-G-H-A-E</span><br>
+        <span class="vocal">월 화 수 목 금 토 일 (窩 花 蘇 摸 坑 偷 伊)</span><br>
+        <span class="vocal">여기 저기 거기 D&E Game Time</span><br>
+         <span class="vocal">(呦機 邱機 摳機 D&E Game Time)</span>
+      </p>
+
+      <p class="stanza">
+        <span class="vocal">I Go High Game Time</span><br>
+        우리 미모 아무도 못 말려<br>
+        <span class="vocal">You Go High Follow me</span><br>
+        우리 미소에 정신 못 차려
+      </p>
+
+      <p class="stanza">
+        <span class="vocal">I Go High Game Time</span><br>
+        우리 미모 아무도 못 말려<br>
+        <span class="vocal">You Go High Follow me</span><br>
+        우리 미소에 정신 못 차려
+      </p>
+    </div>
+  </article>
+
+
+  <!-- ===== GGB ===== -->
+  <article class="song" id="song-ggb">
+    <div class="song-header">
+      <h1 class="song-title">GGB 지지배</h1>
+    </div>
+
+    <div class="video-section open">
+      <button class="video-toggle" onclick="toggleVideo(this)">
+        <div class="video-toggle-left">
+          <div class="video-icon">▶</div>
+          <div>
+            <span class="video-label">GGB 지지배 應援教學影片</span>
+          </div>
+        </div>
+        <span class="video-arrow">▼</span>
+      </button>
+      <div class="video-content">
+        <div class="video-grid">
+          <div class="video-item">
+            <span class="video-tag youtube">▶ YouTube</span>
+            <div class="video-iframe-wrap">
+              <iframe data-src="https://www.youtube.com/embed/zw-S3wILmMU" title="GGB 응원법 教學" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="lyrics">
+      <p class="stanza">
+        <span class="cheer">SUPER JUNIOR D&E GO</span>
+      </p>
+
+      <p class="stanza">
+        계절이 지나 또 다른 온도 <span class="cheer">(다른 온도) (搭愣翁豆)</span><br>
+        여전히 마음은 네게 가 있어 <span class="cheer">(가 있어) (嘎以搜)</span><br>
+        너와 내가 머물던 지난 timeline<br>
+        어떻게 내가 잊겠어 나 혼자 여기서<br>
+        Yeah 어떻게 지내니?
+      </p>
+
+      <p class="stanza">
+        나는 혼자 잘 지냈어 <span class="cheer">(혼자 잘 지냈어)(紅家 才 及內搜)</span><br>
+        문득 네 생각에 살짝 정신이 나갔어 <span class="cheer">(정신이 나갔어)(窮星尼 那嘎搜)</span><br>
+        네가 없는 이곳에 oasis는 없어 <span class="cheer">(Hey, Hey)</span><br>
+        며칠째 목말라 절레절레 내려줘 단비
+      </p>
+
+      <p class="stanza">
+        <span class="vocal">우리 그때의(嗚利 苦得誒) Memory</span> <br>
+        <span class="vocal">더 늦기 전에(偷 ne gi 秋內) I'm sorry</span>
+      </p>
+
+      <p class="stanza">
+        네가 있는 곳은 어디<span class="cheer">(어디)(歐低)</span><br>
+        날 데려가 줘 빨리 <span class="cheer">(빨리)(八力)</span><br>
+        좀 벗어나자 둘이<span class="cheer">(둘이)(杜力)</span> <br>
+        내 손 잡아 <span class="vocal">We can fly</span>
+      </p>
+
+      <p class="stanza">
+        네 생각에 불 켜는 밤 <span class="cheer">(이 밤에)(以半美)</span><br>
+        끝을 몰라 뒤척이는 나 <span class="cheer">(So lonely)</span><br>
+        너 없이도 잘 돌아가는 밤 <span class="cheer">(밤, 밤)(邦邦)</span><br>
+        좀 슬퍼도 어쩌겠어 지켜볼게 멀리서
+      </p>
+
+      <p class="stanza">
+        너무 예쁜 입술에 <span class="cheer">(입 맞추던 네 모습에)(衣嘛 秋登 內某素杯)</span><br>
+        같이 보던 무지개 <span class="cheer">(무지개 같은 입술에)(木吉給 嘎登 衣素內)</span><br>
+        떠나간 네 모습에 <span class="cheer">(모습 Bae Bae)(某素杯杯)</span><br>
+        좀 슬퍼도 어쩌겠어 지켜볼게 멀리서
+      </p>
+
+      <p class="stanza">
+        아직도<br>
+        넌 나만의 bucket list<br>
+        매일 같이 듣던 음악은 아직 playlist에<br>
+        우리 story의 장르는 romance가 아냐<br>
+        Fantasy가 섞인 action<br>
+        복잡한 scenario
+      </p>
+
+      <p class="stanza">
+        딴 생각 안 나 I'm fallin' <span class="cheer">(fallin')</span><br>
+        너와 같이 있는 love story <span class="cheer">(story)</span><br>
+        잊지 못해 널 기다리고 있어
+      </p>
+
+      <p class="stanza">
+        네가 있는 곳은 어디<span class="cheer">(어디)(歐低)</span><br>
+        날 데려가 줘 빨리 <span class="cheer">(빨리)(八力)</span><br>
+        좀 벗어나자 둘이<span class="cheer">(둘이)(杜力)</span> <br>
+        내 손 잡아 <span class="vocal">We can fly</span>
+      </p>
+
+      <p class="stanza">
+        네 생각에 불 켜는 밤 <span class="cheer">(이 밤에)(以半美)</span><br>
+        끝을 몰라 뒤척이는 나 <span class="cheer">(So lonely)</span><br>
+        너 없이도 잘 돌아가는 밤 <span class="cheer">(밤, 밤)(邦邦)</span>
+      </p>
+
+      <p class="stanza">
+        너무 예쁜 입술에 <span class="cheer">(입 맞추던 네 모습에)(衣嘛 秋登 內某素杯)</span><br>
+        같이 보던 무지개 <span class="cheer">(무지개 같은 입술에)(木吉給 嘎登 衣素內)</span><br>
+        떠나 간네 모습에 <span class="cheer">(모습 Bae Bae)(某素杯杯)</span><br>
+        좀 슬퍼도 어쩌겠어 지켜볼게 멀리서
+      </p>
+
+      <p class="stanza">
+        계절이 지나 또 다른 온도 <span class="cheer">(다른 온도) (搭愣翁豆)</span><br>
+        여전히 마음은 네게 가 있어 <span class="cheer">(가 있어) (嘎以搜)</span><br>
+        네가 있는 곳은 어디<span class="cheer">(어디)(歐低)</span><br>
+        날 데려가 줘 빨리 <span class="cheer">(빨리)(八力)</span><br>
+        좀 벗어나자 둘이<span class="cheer">(둘이)(杜力)</span> <br>
+        내 손 잡아 <span class="vocal">We can fly</span>
+      </p>
+
+      <p class="stanza">
+        <span class="cheer">D&E GO!</span>
+      </p>
+
+      <p class="stanza">
+        잠시 머물러간 사랑이었나?<br>
+        우리 인연 여기까지였나?<br>
+        그 예쁜 미소 다신 볼 수는 없나? Yeah<br>
+        외로운 내 맘에 잠깐 와줄 순 없나
+      </p>
+
+      <p class="stanza">
+        너무 예쁜 입술에  <span class="cheer">(입 맞추던 네 모습에)(衣嘛 秋登 內某素杯)</span><br>
+        같이 보던 무지개 <span class="cheer">(무지개 같은 입술에)(木吉給 嘎登 衣素內)</span><br>
+        떠나 간네 모습에 <span class="cheer">(모습 Bae Bae)(某素杯杯)</span><br>
+        좀 슬퍼도 어쩌겠어 지켜볼게 멀리서
+      </p>
+    </div>
+  </article>
+
+
+  <!-- ===== Danger ===== -->
+  <article class="song" id="song-danger">
+    <div class="song-header">
+      <h1 class="song-title">Danger</h1>
+    </div>
+
+    <div class="video-section open">
+      <button class="video-toggle" onclick="toggleVideo(this)">
+        <div class="video-toggle-left">
+          <div class="video-icon">▶</div>
+          <div>
+            <span class="video-label">Danger 應援教學影片</span>
+          </div>
+        </div>
+        <span class="video-arrow">▼</span>
+      </button>
+      <div class="video-content">
+        <div class="video-grid">
+          <div class="video-item">
+            <span class="video-tag youtube">▶ YouTube</span>
+            <div class="video-iframe-wrap">
+              <iframe data-src="https://www.youtube.com/embed/2mf8Hf6-H2s" title="Danger 應援教學" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="lyrics">
+      <p class="stanza">
+        <span class="vocal">Danger！</span><br>
+        날마다 날마다 <span class="vocal">Hey</span> 저마다 착각을 <span class="vocal">해(嘿)</span> 제자리 찾아 나도 모를 자릴 찾으라 해<br>
+        내 말을 들어 너를 알아 누가 감히 나를 알아<span class="vocal">Don't you take a rest</span>이게 웬 난리래
+      </p>
+
+      <p class="stanza">
+        준비는 <span class="vocal">됐어(推搜)</span> (All right) 뻔한 얘기들도 <span class="vocal">That's all</span>그냥 심장을 따라<br>
+        멍청한 소린 <span class="vocal">치워(七窩)</span>불안한 마음은 <span class="vocal">비워(逼窩)</span> 불태워 네 모든 걸 던져 <span class="cheer">(DNE)</span>
+      </p>
+
+      <p class="stanza">
+        Danger<span class="cheer">【이/동/해 이/동/해】(Lee Dong Hae . Lee Dong Hae)</span> 모조리 겨냥해 겨냥해<br>
+        거침없이 Danger<span class="cheer">【이/동/해 이/동/해】(Lee Dong Hae . Lee Dong Hae)</span> 싹 다<br>
+        겨냥해 겨냥해 모조리 <span class="vocal">겨냥해(摳釀嘿)</span><br>
+        난 거침없는 놈그런 놈<span class="cheer">【D/N/E】</span><br>
+        난 겁이 없는 놈 그런 놈<span class="cheer">【D/N/E】</span><br>
+        <span class="vocal">La La La La La</span> 겨낭해 겨냥해 모조리 <span class="vocal">겨냥해(摳釀嘿) my</span>
+      </p>
+
+      <p class="stanza">
+        또 본 적 없는 내일 걱정하고 있네 머저리 질 거란 생각에 사로잡혀있네 처절히<br>
+        더 겁먹을 것 없지 됐어 반전은 짜릿해 샴페인 네 몸의 가치를 올려놔 누구도 올라갈 수 없게 더
+      </p>
+
+      <p class="stanza">
+        준비는 <span class="vocal">됐어(推搜)</span> 뻔한 얘기들啊啊啊도 <span class="vocal">That's all</span> 그냥 심장을 따라<br>
+        멍청한 소린 <span class="vocal">치워(七窩)</span> 불안한 마음은 <span class="vocal">비워(逼窩)</span> 불태워 네 모든 걸 던 <span class="cheer">(DNE)</span>
+      </p>
+
+      <p class="stanza">
+        Danger<span class="cheer">【이/동/해 이/동/해】(Lee Dong Hae . Lee Dong Hae)</span> 모조리 겨냥해 겨냥해<br>
+        거침없이 Danger<span class="cheer">【이/동/해 이/동/해】(Lee Dong Hae . Lee Dong Hae)</span> 싹 다<br>
+        겨냥해 겨냥해 모조리 <span class="vocal">겨냥해(摳釀嘿)</span><br>
+        난 거침없는 놈그런 놈<span class="cheer">【D/N/E】</span><br>
+        난 겁이 없는 놈 그런 놈<span class="cheer">【D/N/E】</span><br>
+        <span class="vocal">La La La La La</span>  겨낭해 겨냥해 모조리 <span class="vocal">겨냥해(摳釀嘿)</span>
+      </p>
+
+      <p class="stanza">
+        생각의 끝에 그냥 너를 걸어 더는 멈추지 마 뒤는 보지 마 네 안에 있는 다른 너를 깨워<br>
+        이제 다시 일어나 <span class="vocal">싹 다(撒 踏)</span> 나를 따라와라<br>
+        싹 다 모두 따라와라<br>
+        싹 다 모두 따라와라<br>
+        <span class="vocal">La La La La La La</span> 나를 따라와라<br>
+        <span class="vocal">LaLa La La La La</span> 모두 따라와라<br>
+        <span class="vocal">La La La La La La</span> 거침없이<br>
+        <span class="vocal">La La La La La La</span> 모조리 겨냥해
+      </p>
+    </div>
+  </article>
+
+  <!-- ===== 'Bout You ===== -->
+  <article class="song" id="song-bout">
+    <div class="song-header">
+      <h1 class="song-title">'Bout You</h1>
+    </div>
+
+    <div class="video-section open">
+      <button class="video-toggle" onclick="toggleVideo(this)">
+        <div class="video-toggle-left">
+          <div class="video-icon">▶</div>
+          <div>
+            <span class="video-label">'Bout You 應援教學影片</span>
+          </div>
+        </div>
+        <span class="video-arrow">▼</span>
+      </button>
+      <div class="video-content">
+        <div class="video-grid">
+          <div class="video-item">
+            <span class="video-tag youtube">▶ YouTube</span>
+            <div class="video-iframe-wrap">
+              <iframe data-src="https://www.youtube.com/embed/lsey0aJlOI4" title="'Bout You 應援教學" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="lyrics">
+      <p class="stanza">
+        登登登登~登登登<span class="cheer">（SU! PER! JUNI! OR! D! N! E!）</span><br>
+        머리부터 발끝까지 <span class="cheer">【이 동 해】(Lee Dong Hae)</span><br>
+        너무 내게 눈이 부셔<span class="cheer">【이 동 해】(Lee Dong Hae)</span>
+      </p>
+
+      <p class="stanza">
+        넌 참 짜릿짜릿해 가끔은 또 여리여리해<br>
+        시간이 갈수록 더 난 달려 너라는 방향의 Road<br>
+        북적북적한 <span class="vocal">거리(摳哩)</span> 같이 걸어볼까 <span class="vocal">우리(巫哩)</span><br>
+        난 네가 좋다면 <span class="vocal">Yeah</span> 그 어디든 갈 수 있어
+      </p>
+
+      <p class="stanza">
+        내 맘을 전부 설명할 수 조차 없어<br>
+        그냥 하는 말이 아니야<br>
+        너만 떠오르는 거야 <span class="vocal">Yeah</span><br>
+        I want to know you, Just all about you<br>
+        이유는 묻지 마 내게 그냥 답은 <span class="vocal">너야 (NO呀)</span>
+      </p>
+
+      <p class="stanza">
+        머리부터 발끝까지 <span class="cheer">(Wow Wow Wow Wow)</span><br>
+        너무 내게 눈이 부셔 <span class="cheer">(Sha La La La)</span><br>
+        너는 내게 공기 <span class="cheer">(Air Air)</span><br>
+        나를 보며 웃어줘 <span class="cheer">Yeah</span><br>
+        난 그걸로 충분해 <span class="cheer">Yeah</span>
+      </p>
+
+      <p class="stanza">
+        내가 찾던 사람 바로 너야<span class="cheer">【이 동 해】(Lee Dong Hae)</span>(All about you）<br>
+        네가 찾고 있는 사람 나야<span class="cheer">【이 동 해】(Lee Dong Hae)</span>（All about you)<br>
+        I am just thinking all about <span class="vocal">you, you</span><br>
+        내가 같이하고 싶은 사람 너야  <span class="cheer">(D N E)</span> All about you
+      </p>
+
+      <p class="stanza">
+        너의 손을 잡고 나의 품 안에 Ye Ye<br>
+        거의 모든 날에 또 나의 순간엔 너 Ye<br>
+        눈이 부신 <span class="vocal">햇살(嘿沙)</span> 그보다 빛나던 나의 <span class="vocal">세상(誰尚)</span><br>
+        다시 데려가 <span class="vocal">줘요(揪喲)</span> 날아 다니게 해<span class="vocal">줘요(揪喲)</span><br>
+        너의 하늘에서 자유롭게
+      </p>
+
+      <p class="stanza">
+        넌 정말 쉽진 않아 내겐 참 어려워<br>
+        내 머리가 아니야 내 가슴이 널 불러 <span class="vocal">Yeah</span><br>
+        I want to know you, Just all about you<br>
+        이유는 묻지 마 내게 그냥 답은 <span class="vocal">너야 (NO呀 )</span>
+      </p>
+
+      <p class="stanza">
+        머리부터 발끝까지 <span class="cheer">(Wow Wow Wow Wow)</span><br>
+        너무 내게 눈이 부셔 <span class="cheer">(Sha La La La)</span><br>
+        너는 내게 공기 <span class="cheer">(Air, Air)</span><br>
+        나를 보며 웃어줘 <span class="vocal">Yeah</span><br>
+        난 그걸로 충분해 <span class="vocal">Yeah</span>
+      </p>
+
+      <p class="stanza">
+        내가 찾던 사람 바로 너야<span class="cheer">【이 동 해】(Lee Dong Hae)</span>（All about you）<br>
+        네가 찾고 있는 사람 나야<span class="cheer">【이 동 해】(Lee Dong Hae)</span>（All about you）<br>
+        I am just thinking all about <span class="vocal">you, you</span><br>
+        내가 같이하고 싶은 사람 너야  <span class="cheer">(D N E)</span> All about you
+      </p>
+
+      <p class="stanza">
+        시간이 됐다 말해 같이 있고 싶다 말해<br>
+        또 다치고 아파도 난 너니까 라고 말해<br>
+        시간이 됐다 말해 같이 있고 싶다 말해<br>
+        또 다시 다치고 아파도 그래도 <span class="vocal">너니까 너니까 (弄你嘎 弄你嘎)</span> <span class="cheer">(D N E)</span>
+      </p>
+
+      <p class="stanza">
+        너란 여잔 나를 너무 몰라<br>
+        나란 남잔 이별을 아주 몰라<br>
+        쉽진 않아 내게 너라는 여잔<br>
+        그래도 난 계속 너이길 바래 난 바래<br>
+        내가 찾던 사람 바로 너야<span class="cheer">【머리부터】(摸力不偷)</span>（All about you）<br>
+        네가 찾고 있는 사람 나야<span class="cheer">【발끝까지】(怕更嘎季)</span>（All about you）<br>
+        I am just thinking all about <span class="vocal">you, you</span><br>
+        내가 같이하고 싶은 사람 너야 <span class="cheer">(D N E)</span> （All about you）
+      </p>
+    </div>
+  </article>
+
+
   <!-- ===== 我們是 E.L.F. ===== -->
   <article class="song" id="song-elf">
     <div class="song-header">
@@ -1411,6 +1518,7 @@
       </div>
     </div>
   </article>
+
 
 </main>
 
