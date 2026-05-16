@@ -122,27 +122,51 @@
     font-family:'Caveat',cursive;
   }
   .hero-btn-row-wrap{
-    text-align:center;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:12px;
     margin-bottom:40px;
+  }
+  .hero-btn-row-wrap > .mp3-btn{
+    margin:0;
+  }
+  .btn-row-inner{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+    justify-content:center;
   }
   .mp3-btn{
     display:inline-flex;
     align-items:center;
     gap:10px;
     text-decoration:none;
-    background:var(--pink-hot);
-    color:#fff;
+    background:#fff;
+    color:var(--pink-hot);
+    border:2px solid var(--pink-hot);
     padding:14px 28px;
     border-radius:999px;
     font-size:15px;
     font-weight:600;
     letter-spacing:.05em;
-    box-shadow:0 6px 20px rgba(236,58,130,.35);
+    box-shadow:0 4px 16px rgba(236,58,130,.12);
     transition:all .25s ease;
   }
   .mp3-btn:hover{
     transform:translateY(-2px);
-    box-shadow:0 8px 24px rgba(236,58,130,.45);
+    background:rgba(236,58,130,.04);
+    box-shadow:0 6px 20px rgba(236,58,130,.18);
+  }
+  .mp3-btn.yt-btn{
+    background:#fff;
+    color:var(--pink-hot);
+    border:2px solid var(--pink-hot);
+    box-shadow:0 4px 16px rgba(236,58,130,.12);
+  }
+  .mp3-btn.yt-btn:hover{
+    background:rgba(236,58,130,.04);
+    box-shadow:0 6px 20px rgba(236,58,130,.18);
   }
   .mp3-icon{
     font-size:18px;
@@ -151,6 +175,14 @@
     font-size:16px;
     margin-left:2px;
     opacity:.9;
+  }
+  .btn-note{
+    font-size:12.5px;
+    color:var(--ink-soft);
+    margin-top:4px;
+    letter-spacing:.02em;
+    text-align:center;
+    line-height:1.6;
   }
 
     /* ===== Color Legend ===== */
@@ -623,11 +655,19 @@
     <h1>FANCHANT</h1>
 
     <div class="hero-btn-row-wrap">
-      <a href="https://drive.google.com/drive/folders/1nep5LHhhoVlLrpAfEneCbE5zOJoSaiaa?usp=sharing" target="_blank" rel="noopener noreferrer" class="mp3-btn">
-        <span class="mp3-icon">🎧</span>
-        <span>應援口號 MP3 下載</span>
-        <span class="mp3-arrow">↗</span>
-      </a>
+      <div class="btn-row-inner">
+        <a href="https://drive.google.com/drive/folders/1nep5LHhhoVlLrpAfEneCbE5zOJoSaiaa?usp=sharing" target="_blank" rel="noopener noreferrer" class="mp3-btn">
+          <span class="mp3-icon">🎧</span>
+          <span>應援口號 MP3 下載</span>
+          <span class="mp3-arrow">↗</span>
+        </a>
+        <a href="https://youtube.com/playlist?list=PLoCT8rNDLFbGbFz6t4mnUGNUZTQrfsqZm&si=TAud-ugjDTi6ua_H" target="_blank" rel="noopener noreferrer" class="mp3-btn yt-btn">
+          <span class="mp3-icon">▶</span>
+          <span>YouTube 播放清單</span>
+          <span class="mp3-arrow">↗</span>
+        </a>
+      </div>
+      <div class="btn-note">＊California Love 請點進下方連結至 Instagram 觀看</div>
     </div>
 
     <div class="legend">
