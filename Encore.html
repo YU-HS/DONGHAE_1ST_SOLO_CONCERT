@@ -535,6 +535,14 @@
     .chant-plus{font-size:13px;flex-shrink:0;color:var(--ink-soft)}
   }
 </style>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DE7SSNSKJ9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-DE7SSNSKJ9');
+</script>
 </head>
 <body>
 
@@ -859,5 +867,46 @@
   });
 </script>
 
+
+<!-- ===== GA 點擊事件追蹤 ===== -->
+<script>
+  function trackEvent(eventName, params){
+    if (typeof gtag === 'function') {
+      gtag('event', eventName, params);
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    
+    // 1. 追蹤外連結 / 內頁切換按鈕
+    document.querySelectorAll('.mp3-btn').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        const label = btn.textContent.trim();
+        const href = btn.getAttribute('href') || '';
+        const isExternal = btn.getAttribute('target') === '_blank';
+        trackEvent('button_click', {
+          button_name: label,
+          button_type: isExternal ? 'external_link' : 'internal_link',
+          link_url: href,
+          page_location: window.location.pathname
+        });
+      });
+    });
+
+    // 2. 追蹤 DAY 切換
+    document.querySelectorAll('.nav-btn').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        const dayName = btn.textContent.trim();
+        const target = btn.getAttribute('data-target') || '';
+        trackEvent('day_click', {
+          day_name: dayName,
+          day_id: target,
+          page_location: window.location.pathname
+        });
+      });
+    });
+
+  });
+</script>
 </body>
 </html>
