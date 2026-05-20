@@ -792,7 +792,7 @@
     </div>
 
     <div class="note">
-      🌸 <strong>注意事項</strong>　本頁所有應援口號、歌詞、教學影片均轉載自網路公開資源，著作權皆屬原作者及版權方所有。本頁僅作為粉絲應援用途整理，<strong>非商業使用</strong>。讓我們一起為東海加油！ 🩷
+      🌸 <strong>注意事項</strong>　本頁所有應援口號、歌詞、教學影片均轉載自網路公開資源，著作權皆屬原作者及版權方所有。本頁僅作為粉絲應援用途整理，<strong>非商業使用</strong>。
       <br><br>
       📝 <strong>應援詞調整說明</strong>　由於本場為東海個人演唱會，部分歌曲（如 Go High、Danger、'Bout You）原版 D&E 應援詞中的喊名，文字皆已調整為東海專屬版「<strong>D-O-N-G-H-A-E、이동해（Lee Dong Hae）</strong>」，讓我們一起為東海熱情應援 🩵！
     </div>
@@ -893,7 +893,7 @@
 
       <p class="stanza">
         해 떴네 uh<br>
-        눈이 부시게도 해 떴네 (What you want from me)<br>
+        눈이 부시게도 해 떴네 <span class="vocal">(What you want from me)</span><br>
         I'm living 구름 위 위에 해 떴네 (From me Aye)<br>
         I'm living <span class="vocal">high high</span> 해 떴네<br>
         <span class="vocal">What you want from me Aye</span> 
@@ -945,7 +945,7 @@
 
       <p class="stanza">
         해 떴네 uh<br>
-        눈이 부시게도 해 떴네(What you want from me)<br>
+        눈이 부시게도 해 떴네 <span class="vocal">(What you want from me)</span><br>
         I'm living 구름 위 위에 해 떴네 (From me Aye)<br>
         I'm living <span class="vocal">high high</span> 해 떴네<br>
         <span class="vocal">What you want from me Aye</span> 
@@ -1613,12 +1613,6 @@
     </div>
 
     <div class="elf-only">
-      <p class="elf-intro">
-        E.L.F. 是 Super Junior 的官方粉絲名稱<br>
-        — <strong>Ever Lasting Friends</strong> —<br>
-        我們會永遠守護東海，東海也會永遠陪著我們 🌸
-      </p>
-
       <div class="video-section open">
         <button class="video-toggle" onclick="toggleVideo(this)">
           <div class="video-toggle-left">
@@ -1725,5 +1719,65 @@
   });
 </script>
 
+
+<!-- ===== GA 點擊事件追蹤 ===== -->
+<script>
+  // 確保 gtag 已載入
+  function trackEvent(eventName, params){
+    if (typeof gtag === 'function') {
+      gtag('event', eventName, params);
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    
+    // 1. 追蹤外連結按鈕（MP3 / YouTube / 表單 / 安可曲）
+    document.querySelectorAll('.mp3-btn').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        const label = btn.textContent.trim();
+        const href = btn.getAttribute('href') || '';
+        const isExternal = btn.getAttribute('target') === '_blank';
+        trackEvent('button_click', {
+          button_name: label,
+          button_type: isExternal ? 'external_link' : 'internal_link',
+          link_url: href,
+          page_location: window.location.pathname
+        });
+      });
+    });
+
+    // 2. 追蹤歌曲切換 nav-btn
+    document.querySelectorAll('.nav-btn').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        const songName = btn.textContent.trim();
+        const target = btn.getAttribute('data-target') || '';
+        trackEvent('song_click', {
+          song_name: songName,
+          song_id: target,
+          page_location: window.location.pathname
+        });
+      });
+    });
+
+    // 3. 追蹤影片展開/收起 (video-toggle)
+    document.querySelectorAll('.video-toggle').forEach(function(toggle){
+      toggle.addEventListener('click', function(){
+        const section = toggle.closest('.video-section');
+        const isOpen = section && section.classList.contains('open');
+        // 找這個影片屬於哪首歌
+        const songArticle = toggle.closest('article.song');
+        const songId = songArticle ? songArticle.id : 'unknown';
+        const labelEl = toggle.querySelector('.video-label');
+        const videoLabel = labelEl ? labelEl.textContent.trim() : '';
+        trackEvent('video_toggle', {
+          action: isOpen ? 'collapse' : 'expand',  // 注意：執行 click 時 class 還沒切換，所以反向
+          song_id: songId,
+          video_label: videoLabel
+        });
+      });
+    });
+
+  });
+</script>
 </body>
 </html>
