@@ -447,6 +447,85 @@
     color:var(--bg-deep);
   }
 
+  /* IG Card — Y2K 風 */
+  .ig-card{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    padding:16px 20px;
+    background:rgba(179,236,245,.06);
+    border:1px solid var(--line);
+    border-left:2px solid var(--magenta);
+    text-decoration:none;
+    transition:all .2s ease;
+    position:relative;
+  }
+  .ig-card::before{
+    content:'+';
+    position:absolute;
+    top:6px;left:6px;
+    font-family:'Space Mono',monospace;
+    color:var(--magenta);
+    font-size:12px;
+    line-height:1;
+  }
+  .ig-card::after{
+    content:'+';
+    position:absolute;
+    bottom:6px;right:6px;
+    font-family:'Space Mono',monospace;
+    color:var(--magenta);
+    font-size:12px;
+    line-height:1;
+  }
+  .ig-card:hover{
+    background:rgba(255,62,160,.1);
+    border-left-color:var(--cyan);
+  }
+  .ig-icon-wrap{
+    flex-shrink:0;
+    width:42px;
+    height:42px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:var(--magenta);
+    color:var(--bg-deep);
+    font-size:14px;
+    border-radius:0;
+    font-weight:700;
+  }
+  .ig-text{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    gap:2px;
+    min-width:0;
+  }
+  .ig-handle{
+    font-family:'Space Mono',monospace;
+    font-size:10.5px;
+    letter-spacing:.15em;
+    color:var(--cyan-soft);
+    text-transform:uppercase;
+    font-weight:700;
+  }
+  .ig-desc{
+    font-size:14px;
+    color:var(--white);
+    letter-spacing:.02em;
+    font-weight:500;
+  }
+  .ig-arrow{
+    font-family:'Space Mono',monospace;
+    font-size:13px;
+    color:var(--magenta);
+    letter-spacing:.05em;
+    font-weight:700;
+    flex-shrink:0;
+  }
+  .ig-card:hover .ig-arrow{color:var(--cyan)}
+
   /* ===== 小提醒 ===== */
   .song-tip{
     background:rgba(179,236,245,.08);
@@ -857,14 +936,16 @@
       <div class="video-content">
         <div class="video-grid">
           <div class="video-item">
-            <span class="video-tag instagram">◎ Instagram</span>
+            <div class="video-tag-row">
+              <span class="video-tag instagram">◎ Instagram</span>
+            </div>
             <a class="ig-card" href="https://www.instagram.com/dh65_elf/reel/DA982fGTDXf/" target="_blank" rel="noopener noreferrer">
-              <div class="ig-icon-wrap">📷</div>
+              <div class="ig-icon-wrap">▶</div>
               <div class="ig-text">
-                <div class="ig-handle">Instagram Reel</div>
+                <div class="ig-handle">INSTAGRAM REEL</div>
                 <div class="ig-desc">California Love 應援教學</div>
               </div>
-              <div class="ig-arrow">↗</div>
+              <div class="ig-arrow">[ ↗ ]</div>
             </a>
           </div>
         </div>
