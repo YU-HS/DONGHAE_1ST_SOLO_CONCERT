@@ -1,0 +1,1690 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026 DONGHAE [ALIVE] in KAOHSIUNG ・ 應援口號 FANCHANT GUIDE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Noto+Sans+TC:wght@300;400;500;700;900&family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg-deep:#152944;
+    --bg-mid:#243b5a;
+    --bg-light:#31496b;
+    --cyan:#b3ecf5;
+    --cyan-soft:#d3f2f7;
+    --magenta:#ff3ea0;
+    --magenta-soft:#ff6ab8;
+    --white:#ffffff;
+    --gray:#a8b6c8;
+    --gray-soft:#d0d8e4;
+    --line:rgba(179,236,245,.35);
+    --line-strong:rgba(255,62,160,.6);
+    --c-vocal:#ff3ea0;
+    --c-cheer:#ffd944;
+    --c-kor:#ffffff;
+    --c-hint:#b3ecf5;
+    /* alias legacy */
+    --pink-hot:#ff3ea0;
+    --pink:rgba(255,62,160,.5);
+    --cream:#152944;
+    --ink:#ffffff;
+    --ink-soft:#d0d8e4;
+    --yellow:#ffd944;
+    --sage:#a8b6c8;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+
+  body{
+    font-family:'Noto Sans TC',sans-serif;
+    background:var(--bg-deep);
+    color:var(--white);
+    line-height:1.75;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+    position:relative;
+    min-height:100vh;
+  }
+
+  body::before{
+    content:'';
+    position:fixed;inset:0;
+    background:
+      radial-gradient(ellipse 900px 700px at 15% 10%, rgba(179,236,245,.22), transparent 55%),
+      radial-gradient(ellipse 700px 500px at 90% 90%, rgba(255,62,160,.18), transparent 55%),
+      linear-gradient(180deg, var(--bg-deep) 0%, var(--bg-mid) 60%, var(--bg-deep) 100%);
+    pointer-events:none;z-index:0;
+  }
+  body::after{content:none}
+
+  /* ===== HERO ===== */
+  .hero{
+    position:relative;z-index:2;
+    padding:24px 24px 40px;
+    max-width:1200px;
+    margin:0 auto;
+    text-align:center;
+  }
+
+  .top-info{
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    gap:32px;
+    padding-bottom:24px;
+    border-bottom:1px solid var(--line);
+    margin-bottom:32px;
+    font-family:'Space Mono',monospace;
+    font-size:11.5px;
+    letter-spacing:.12em;
+    color:#ffffff;
+    text-transform:uppercase;
+    flex-wrap:wrap;
+    font-weight:500;
+  }
+  .top-info-left{line-height:1.7;text-align:center}
+  .top-info-right{text-align:center;color:var(--magenta);line-height:1.7;font-weight:700}
+  .top-info-right::before{content:'>>> >>>  '}
+
+  .meta-block{
+    display:flex;
+    justify-content:center;
+    gap:32px;
+    padding:20px 0;
+    align-items:end;
+    border-bottom:1px solid var(--line);
+    margin-bottom:32px;
+    flex-wrap:wrap;
+  }
+  .meta-date{
+    font-family:'Space Mono',monospace;
+    font-size:12.5px;
+    letter-spacing:.18em;
+    color:var(--magenta);
+    text-transform:uppercase;
+    line-height:1.5;
+    text-align:center;
+    font-weight:700;
+  }
+  .meta-date .location{
+    display:block;
+    color:#ffffff;
+    margin-top:4px;
+    font-weight:500;
+  }
+  .meta-id{
+    font-family:'Space Mono',monospace;
+    font-size:12px;
+    letter-spacing:.15em;
+    color:#ffffff;
+    text-align:center;
+    font-weight:500;
+  }
+  .meta-id .target{color:var(--magenta);font-weight:700}
+
+  h1.hero-title, .hero-text h1{
+    font-family:'Anton', 'Bebas Neue', sans-serif;
+    font-size:clamp(88px, 20vw, 220px);
+    line-height:.85;
+    letter-spacing:-.02em;
+    color:var(--magenta);
+    margin:16px 0 32px;
+    text-transform:uppercase;
+    position:relative;
+    display:inline-block;
+    filter:drop-shadow(0 0 20px rgba(255,62,160,.4));
+  }
+  h1.hero-title::after, .hero-text h1::after{
+    content:'>>> >>>';
+    position:absolute;
+    bottom:12%;
+    right:-90px;
+    font-family:'Space Mono',monospace;
+    font-size:16px;
+    color:var(--magenta);
+    letter-spacing:.2em;
+    filter:none;
+  }
+
+  .hero-sub{display:none}
+  .hero-text{padding:0}
+
+  .hero-tagline{
+    font-family:'Space Mono',monospace;
+    font-size:12.5px;
+    letter-spacing:.15em;
+    color:var(--magenta);
+    text-transform:uppercase;
+    line-height:1.7;
+    padding-top:20px;
+    border-top:1px solid var(--line);
+    text-align:center;
+    font-weight:700;
+    margin:32px auto 0;
+  }
+  .hero-tagline .white{color:#ffffff;font-weight:500}
+
+  /* ===== 按鈕 ===== */
+  .hero-btn-row-wrap{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:16px;
+    margin:32px auto 0;
+  }
+  .btn-row-inner{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+  .mp3-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    text-decoration:none;
+    background:transparent;
+    color:var(--cyan);
+    border:1px solid var(--cyan);
+    padding:12px 22px;
+    border-radius:0;
+    font-family:'Noto Sans TC','Space Grotesk',sans-serif;
+    font-size:13.5px;
+    font-weight:500;
+    letter-spacing:.08em;
+    white-space:nowrap;
+    transition:all .2s ease;
+    position:relative;
+  }
+  .mp3-btn::before{content:'[ ';opacity:.5;margin-right:2px}
+  .mp3-btn::after{content:' ]';opacity:.5;margin-left:2px}
+  .mp3-btn:hover{background:var(--cyan);color:var(--bg-deep)}
+  .mp3-btn.yt-btn{color:var(--cyan);border-color:var(--cyan)}
+  .mp3-btn.yt-btn:hover{background:var(--cyan);color:var(--bg-deep)}
+  .mp3-btn.page-btn{color:var(--magenta);border-color:var(--magenta)}
+  .mp3-btn.page-btn:hover{background:var(--magenta);color:var(--bg-deep)}
+  .btn-note{
+    font-size:11.5px;
+    color:var(--cyan-soft);
+    letter-spacing:.05em;
+    margin-top:8px;
+    font-family:'Space Mono',monospace;
+    text-align:center;
+  }
+
+  /* ===== 注意事項 ===== */
+  .note{
+    max-width:820px;
+    text-align:left;
+    font-size:13px;
+    color:var(--gray-soft);
+    padding:18px 22px;
+    background:rgba(179,236,245,.08);
+    border:1px solid var(--line);
+    border-left:2px solid var(--cyan);
+    margin:32px auto 0;
+    line-height:1.85;
+    border-radius:0;
+  }
+  .note strong{color:var(--magenta);font-weight:700}
+
+  /* ===== Sticky Nav ===== */
+  .nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(21,41,68,.9);
+    backdrop-filter:blur(16px);
+    border-top:1px solid var(--line-strong);
+    border-bottom:1px solid var(--line-strong);
+    padding:12px 0;
+  }
+  .nav-inner{
+    display:flex;gap:8px;justify-content:center;
+    padding:0 16px;
+    max-width:1000px;margin:0 auto;
+    flex-wrap:wrap;
+  }
+  .nav-btn{
+    flex:0 0 auto;
+    background:transparent;
+    border:1px solid var(--cyan);
+    color:var(--cyan);
+    padding:8px 18px;
+    font-family:'Noto Sans TC','Space Grotesk',sans-serif;
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:.05em;
+    border-radius:0;
+    cursor:pointer;
+    transition:all .2s ease;
+    white-space:nowrap;
+  }
+  .nav-btn:hover{background:var(--cyan);color:var(--bg-deep)}
+  .nav-btn.active{
+    background:var(--magenta);
+    border-color:var(--magenta);
+    color:var(--bg-deep);
+    box-shadow:0 0 16px rgba(255,62,160,.5);
+  }
+
+  /* ===== Main ===== */
+  main{
+    position:relative;z-index:2;
+    max-width:820px;
+    margin:0 auto;
+    padding:48px 24px 120px;
+  }
+  .song{
+    display:none;
+    animation:fadeIn .5s ease;
+  }
+  .song.active{display:block}
+  @keyframes fadeIn{
+    from{opacity:0;transform:translateY(20px)}
+    to{opacity:1;transform:translateY(0)}
+  }
+
+  /* ===== Song Header ===== */
+  .song-header{
+    margin-bottom:24px;
+    padding-bottom:20px;
+    border-bottom:1px solid var(--line);
+    text-align:center;
+  }
+  .song-title{
+    font-family:'Anton','Bebas Neue',sans-serif;
+    font-size:clamp(44px, 8vw, 78px);
+    line-height:.95;
+    letter-spacing:-.01em;
+    color:var(--magenta);
+    text-transform:uppercase;
+    filter:drop-shadow(0 0 12px rgba(255,62,160,.3));
+  }
+
+  /* ===== 影片摺疊區塊 ===== */
+  .video-section{
+    margin-bottom:28px;
+    background:rgba(179,236,245,.06);
+    border:1px solid var(--line);
+    position:relative;
+  }
+  .video-section::before{
+    content:'+';
+    position:absolute;
+    top:6px;left:6px;
+    font-family:'Space Mono',monospace;
+    color:var(--magenta);
+    font-size:14px;
+    line-height:1;
+    z-index:2;
+  }
+  .video-section::after{
+    content:'+';
+    position:absolute;
+    bottom:6px;right:6px;
+    font-family:'Space Mono',monospace;
+    color:var(--magenta);
+    font-size:14px;
+    line-height:1;
+    z-index:2;
+  }
+  .video-toggle{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:transparent;
+    border:none;
+    padding:14px 20px;
+    cursor:pointer;
+    color:var(--cyan-soft);
+    font-family:'Noto Sans TC','Space Grotesk',sans-serif;
+    font-size:14px;
+    font-weight:600;
+    letter-spacing:.05em;
+    text-align:left;
+  }
+  .video-toggle:hover{color:var(--magenta)}
+  .video-toggle-left{
+    display:flex;
+    align-items:center;
+    gap:12px;
+  }
+  .video-icon{
+    color:var(--magenta);
+    font-size:12px;
+  }
+  .video-label{
+    color:var(--cyan-soft);
+    letter-spacing:.05em;
+  }
+  .video-toggle:hover .video-label{color:var(--magenta)}
+  .video-arrow{
+    font-size:12px;
+    color:var(--cyan);
+    transition:transform .3s ease;
+  }
+  .video-section.open .video-arrow{transform:rotate(180deg)}
+  .video-content{
+    display:none;
+    padding:0 14px 14px;
+  }
+  .video-section.open .video-content{display:block}
+  .video-grid{
+    display:grid;
+    gap:16px;
+  }
+  .video-item{
+    display:flex;flex-direction:column;
+  }
+  .video-tag-row{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-bottom:10px;
+  }
+  .video-tag{
+    display:inline-flex;align-items:center;gap:6px;
+    align-self:flex-start;
+    font-family:'Space Mono',monospace;
+    font-size:10px;
+    letter-spacing:.15em;
+    text-transform:uppercase;
+    padding:4px 10px;
+    border-radius:0;
+    font-weight:700;
+    margin-bottom:0;
+  }
+  .video-tag.youtube{background:rgba(255,62,160,.15);color:var(--magenta);border:1px solid rgba(255,62,160,.4)}
+  .video-tag.instagram{
+    background:rgba(179,236,245,.12);
+    color:var(--cyan);
+    border:1px solid var(--line);
+  }
+  .video-note{
+    font-size:12px;
+    color:var(--magenta);
+    font-weight:500;
+    letter-spacing:.02em;
+  }
+  .video-iframe-wrap{
+    position:relative;
+    width:100%;
+    padding-bottom:56.25%;
+    background:#000;
+    overflow:hidden;
+  }
+  .video-iframe-wrap iframe{
+    position:absolute;top:0;left:0;
+    width:100%;height:100%;border:none;
+  }
+
+  /* IG 影片區 */
+  .instagram-embed{
+    background:rgba(21,41,68,.6);
+    border:1px solid var(--line);
+    padding:20px;
+    text-align:center;
+    color:var(--cyan-soft);
+    font-family:'Space Mono',monospace;
+    font-size:13px;
+    letter-spacing:.05em;
+  }
+  .instagram-embed a{
+    color:var(--magenta);
+    text-decoration:none;
+    font-weight:700;
+    border-bottom:1px solid var(--magenta);
+    padding-bottom:2px;
+    transition:all .2s ease;
+  }
+  .instagram-embed a:hover{
+    background:var(--magenta);
+    color:var(--bg-deep);
+  }
+
+  /* ===== 小提醒 ===== */
+  .song-tip{
+    background:rgba(179,236,245,.08);
+    border:1px solid var(--line);
+    border-left:2px solid var(--cyan);
+    padding:14px 18px;
+    margin:0 0 20px;
+    font-size:13.5px;
+    color:var(--gray-soft);
+    line-height:1.85;
+    border-radius:0;
+  }
+  .song-tip strong{color:var(--magenta);font-weight:700}
+
+  /* ===== Color Guide ===== */
+  .legend{
+    display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:16px;
+    max-width:820px;margin:0 auto 20px;
+    padding:14px 18px;
+    background:rgba(179,236,245,.07);
+    border:1px solid var(--line);
+    border-radius:0;
+    position:relative;
+  }
+  .legend::before{content:none}
+  .legend-title{
+    width:100%;
+    font-family:'Space Mono',monospace;
+    font-size:11px;
+    color:var(--cyan-soft);
+    text-align:center;
+    margin-bottom:6px;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    font-weight:700;
+  }
+  .legend-title::before{content:'[ '}
+  .legend-title::after{content:' ]'}
+  .legend-item{
+    display:flex;align-items:center;gap:8px;
+    font-size:12px;
+    color:var(--gray-soft);
+    letter-spacing:.05em;
+  }
+  .legend-dot{
+    width:10px;height:10px;
+    box-shadow:0 0 6px currentColor;
+    border-radius:0;
+  }
+  .legend-item.vocal .legend-dot{background:var(--c-vocal);color:var(--c-vocal)}
+  .legend-item.cheer .legend-dot{background:var(--c-cheer);color:var(--c-cheer)}
+  .legend-item.kor .legend-dot{background:var(--c-kor);color:var(--c-kor)}
+
+  /* ===== 歌詞 ===== */
+  .lyrics{
+    font-size:15.5px;
+    line-height:2;
+    color:var(--white);
+  }
+  .lyrics .stanza, .stanza{
+    padding:18px 22px;
+    margin-bottom:14px;
+    background:rgba(179,236,245,.05);
+    border:1px solid var(--line);
+    border-left:2px solid var(--magenta);
+    border-radius:0;
+  }
+  .stanza:hover{background:rgba(179,236,245,.09)}
+  .vocal{color:var(--c-vocal);font-weight:600}
+  .cheer{color:var(--c-cheer);font-weight:600}
+
+  /* ELF 專屬 */
+  .elf-only{padding:0}
+
+  /* ===== Footer ===== */
+  footer{
+    position:relative;z-index:2;
+    text-align:center;
+    padding:40px 24px 32px;
+    border-top:1px solid var(--line);
+    color:#ffffff;
+    font-family:'Space Mono',monospace;
+    font-size:11.5px;
+    line-height:2;
+    letter-spacing:.15em;
+    text-transform:uppercase;
+    font-weight:500;
+  }
+  footer .bracket{
+    color:var(--magenta);
+    font-family:'Anton',sans-serif;
+    font-size:13px;
+    letter-spacing:.2em;
+    display:block;
+    margin-bottom:6px;
+    font-weight:400;
+  }
+
+  /* 回頂部 */
+  .top-btn{
+    position:fixed;
+    bottom:24px;right:24px;
+    width:44px;height:44px;
+    border-radius:0;
+    background:var(--magenta);
+    border:1px solid var(--magenta);
+    color:var(--bg-deep);
+    font-family:'Space Mono',monospace;
+    font-size:16px;
+    font-weight:700;
+    cursor:pointer;
+    z-index:60;
+    display:none;
+    align-items:center;justify-content:center;
+    box-shadow:0 0 20px rgba(255,62,160,.5);
+    transition:all .2s ease;
+  }
+  .top-btn:hover{
+    background:var(--cyan);
+    border-color:var(--cyan);
+    box-shadow:0 0 20px rgba(179,236,245,.6);
+  }
+  .top-btn.show{display:flex}
+
+  /* Mobile */
+  @media (max-width:640px){
+    .hero{padding:20px 18px 32px}
+    .top-info{font-size:9.5px;padding-bottom:18px;margin-bottom:24px;gap:16px}
+    .meta-block{margin-bottom:24px;padding:14px 0;gap:16px}
+    h1.hero-title, .hero-text h1{margin:12px 0 24px}
+    h1.hero-title::after, .hero-text h1::after{display:none}
+    .hero-tagline{font-size:10px;padding-top:14px}
+    main{padding:32px 18px 100px}
+    .lyrics{font-size:14.5px;line-height:1.95}
+    .lyrics .stanza, .stanza{padding:14px 16px}
+    .song-title{filter:none}
+    .legend{gap:10px;padding:14px}
+    .legend-item{font-size:11px}
+    .btn-row-inner{display:grid;grid-template-columns:1fr 1fr;gap:8px;width:100%}
+    .mp3-btn{padding:10px 6px;font-size:12px;width:100%}
+    .nav-inner{
+      display:grid;
+      grid-template-columns:repeat(4, 1fr);
+      gap:6px;
+      padding:0 12px;
+    }
+    .nav-btn{padding:8px 4px;font-size:11px;width:100%;text-align:center;letter-spacing:.02em}
+    .video-toggle{padding:12px 16px;font-size:13px}
+  }
+</style>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DE7SSNSKJ9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-DE7SSNSKJ9');
+</script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="top-info">
+    <div class="top-info-left">
+      DONGHAE 1ST SOLO CONCERT TOUR [ALIVE] IN KAOHSIUNG<br>
+      DONGHAE TW&ELF UNION
+    </div>
+    <div class="top-info-right">
+      ( LEEDONGHAE )
+    </div>
+  </div>
+
+  <div class="meta-block">
+    <div class="meta-date">
+      JUL 25TH–26TH, 2026
+      <span class="location">IN KAOHSIUNG</span>
+    </div>
+    <div class="meta-id">
+      NO.<span class="target">1015</span>
+    </div>
+  </div>
+
+  <div class="hero-text">
+    <h1>FANCHANT</h1>
+
+    <div class="hero-btn-row-wrap">
+      <div class="btn-row-inner">
+        <a href="https://drive.google.com/drive/folders/1gMjjkBlgKrn51OkASznjX9_c-x9A8irS?usp=sharing" target="_blank" rel="noopener noreferrer" class="mp3-btn">
+          <span>應援口號 MP3 下載</span>
+        </a>
+        <a href="https://youtube.com/playlist?list=PLoCT8rNDLFbGbFz6t4mnUGNUZTQrfsqZm&si=TAud-ugjDTi6ua_H" target="_blank" rel="noopener noreferrer" class="mp3-btn yt-btn">
+          <span>應援口號 YT 播放清單</span>
+        </a>
+        <a href="KH_Encore.html" class="mp3-btn page-btn">
+          <span>安可應援</span>
+        </a>
+        <a href="https://forms.gle/ZGLHpgswbcVi4aoc6" target="_blank" rel="noopener noreferrer" class="mp3-btn page-btn">
+          <span>小幫手招募</span>
+        </a>
+      </div>
+      <div class="btn-note">＊California Love 請點進下方連結至 Instagram 觀看</div>
+    </div>
+  </div>
+
+  <div class="hero-tagline">
+    <span class="white">WELCOME TO DONGHAE'S UNIVERSE</span><br>
+    I'M A ROCKET MAN — WE DON'T NEED ROAD AND MAP
+  </div>
+
+  <div class="note">
+    🌸 <strong>注意事項</strong>　本頁所有應援口號、歌詞、教學影片均轉載自網路公開資源，著作權皆屬原作者及版權方所有。本頁僅作為粉絲應援用途整理，<strong>非商業使用</strong>。
+    <br><br>
+    📝 <strong>應援詞調整說明</strong>　由於本場為東海個人演唱會，部分歌曲（如 Go High、Danger、'Bout You）原版 D&E 應援詞中的喊名，文字皆已調整為東海專屬版「<strong>D-O-N-G-H-A-E、이동해（Lee Dong Hae）</strong>」，讓我們一起為東海熱情應援 🩵！
+  </div>
+</section>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner" id="navInner">
+    <button class="nav-btn active" data-target="song-haetnae">해 떴네</button>
+    <button class="nav-btn" data-target="song-cali">California Love</button>
+    <button class="nav-btn" data-target="song-gohigh">Go High</button>
+    <button class="nav-btn" data-target="song-ggb">GGB 지지배</button>
+    <button class="nav-btn" data-target="song-danger">Danger</button>
+    <button class="nav-btn" data-target="song-bout">'Bout You</button>
+    <button class="nav-btn" data-target="song-elf">我們是 E.L.F.</button>
+  </div>
+</nav>
+
+<main>
+
+  <!-- ===== 해 떴네 ===== -->
+  <article class="song active" id="song-haetnae">
+    <div class="song-header">
+      <h1 class="song-title">해 떴네</h1>
+    </div>
+
+    <div class="video-section open">
+      <button class="video-toggle" onclick="toggleVideo(this)">
+        <div class="video-toggle-left">
+          <div class="video-icon">▶</div>
+          <div>
+            <span class="video-label">해 떴네 應援教學影片</span>
+          </div>
+        </div>
+        <span class="video-arrow">▼</span>
+      </button>
+      <div class="video-content">
+        <div class="video-grid">
+          <div class="video-item">
+            <span class="video-tag youtube">▶ YouTube</span>
+            <div class="video-iframe-wrap">
+              <iframe data-src="https://www.youtube.com/embed/dM6S4fr30E8" title="해 떴네 應援教學" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="song-tip">
+      🔔 <strong>小提醒</strong>　關於《해 떴네》歌曲中間部分的「What you want from me Aye」應援，由於官方文字版應援說明有包含此段歌詞，雖東海應援教學影片中未帶到，團隊仍依官方應援說明保留於文字及影片中，提供大家參考，實際可依現場狀況一起自然參與 💙
+    </div>
+
+    <div class="legend">
+      <div class="legend-title">Color Guide ・ 顏色說明</div>
+      <div class="legend-item kor"><span class="legend-dot"></span><span>韓文歌詞 / Lyrics</span></div>
+      <div class="legend-item vocal"><span class="legend-dot"></span><span>跟唱 / 跟唸 Sing-along</span></div>
+      <div class="legend-item cheer"><span class="legend-dot"></span><span>應援詞 Fanchant</span></div>
+    </div>
+
+    <div class="lyrics">
+      <p class="stanza">
+        <span class="cheer">(이! 동! 해! 눈! 이! 부! 시! 게! 도! )</span><br>
+        <span class="cheer">(Lee! Dong! Hae! 怒! 尼! 步! 細! 給! 豆!)</span><br>
+        해 떴네 uh<br>
+        해 떴네 uh<br>
+        해 떴네 uh (From me Aye)<br>
+        I'm living <span class="vocal">high high</span> 해 떴네 uh<br>
+        <span class="vocal">(What you want from me)</span> 
+      </p>
+
+      <p class="stanza">
+        Congratulations 이기는 습관이 뱄어<br>
+        제대로 물려받은 <span class="vocal">Passion</span> <br>
+        예술가 집안에선 당연한 <span class="vocal">Question</span> <br>
+        Don't stop me now 건들지 마
+      </p>
+
+      <p class="stanza">
+        급이 달라 너와 달리<br>
+        Mic check 귀찮아 Mumbling<br>
+        가지마 가지마 하지마 하지마<br>
+        <span class="vocal">이게 내 스타일 (一給 內 Style)</span>
+      </p>
+
+      <p class="stanza">
+        골 때리는 Kick-Kick Chak-Chak Freaky<br>
+        리듬 감아서 차 <span class="vocal">Kickflip</span> <br>
+        심장 울리는 Bassline<br>
+        리듬 따라가 <span class="vocal">Stalking</span> 
+      </p>
+
+      <p class="stanza">
+        다리 떨어 Day and night 혈액순환<br>
+        뒷 박에 Groove 따라서 나와<br>
+        남자다운 척 <span class="vocal">Love or die</span> <br>
+        리듬에 Perfume <span class="vocal">Chik-Chik</span> 
+      </p>
+
+      <p class="stanza">
+        You don't know <span class="cheer">(함성)(歡呼!)</span> <br>
+        Too bad untouchable<br>
+        해 뜨고 나면 눈부셔 Brand new <span class="cheer">(이!동!해떴네!)(Lee! Dong! 嘿豆內!)</span><br>
+        해 떴네 uh
+      </p>
+
+      <p class="stanza">
+        해 떴네 uh<br>
+        눈이 부시게도 해 떴네 (What you want from me)<br>
+        I'm living 구름 위 위에 해 떴네 (From me Aye)<br>
+        I'm living <span class="vocal">high high</span> 해 떴네<br>
+        <span class="vocal">What you want from me Aye</span> 
+      </p>
+
+      <p class="stanza">
+        살다가 보니 해 떴네 <span class="cheer">(이!동!해!) (Lee! Dong! Hae!)</span><br>
+        (Want you my right by my side)<br>
+        눈이 부시게도 해 떴네<br>
+        (Want you my right by my side love)<br>
+        어둠은 사라지고 해 떴네<span class="cheer">(해!떴!네!) (嘿!豆!內!)</span><br>
+        (Want you my right by my side)<br>
+        저기 막 떴네<br>
+        <span class="vocal">What you want from me Aye</span><br>
+        해 떴네 uh
+      </p>
+
+      <p class="stanza">
+        Take me to the sky <span class="cheer">(함성)(歡呼!)</span><br>
+        I'm still alive a life<br>
+        Nobody can drag me down<br>
+        충분해 Beautiful day
+      </p>
+
+      <p class="stanza">
+        Take me to your heart<br>
+        눈을 맞추고<br>
+        Pull me Close up<br>
+        Yeah I've been losing my mind
+      </p>
+
+      <p class="stanza">
+        Too bad untouchable<br>
+        해 뜨고 나면 눈부셔 <span class="vocal">Brand new</span> <br>
+        Too bad untouchable<br>
+        다리 <span class="vocal">떨어(多摟)</span> 폼 나게 <span class="vocal">걸어(勾摟)</span>
+      </p>
+
+      <p class="stanza">
+        눈 감고 폼 나게 뛰어 버려<br>
+        화끈하게 들어와 <span class="vocal">Skydive</span> <br>
+        뛰어 버려 패기 하나 걸치고 낙하<br>
+        필요 없는 Parachute
+      </p>
+
+      <p class="stanza">
+        <span class="vocal">해 떴네 uh (嘿豆內 uh)</span> 
+      </p>
+
+      <p class="stanza">
+        해 떴네 uh<br>
+        눈이 부시게도 해 떴네 (What you want from me)<br>
+        I'm living 구름 위 위에 해 떴네 (From me Aye)<br>
+        I'm living <span class="vocal">high high</span> 해 떴네<br>
+        <span class="vocal">What you want from me Aye</span> 
+      </p>
+
+      <p class="stanza">
+        살다가 보니 해 떴네 <span class="cheer">(이!동!해!) (Lee! Dong! Hae!)</span><br>
+        (Want you my right by my side)<br>
+        눈이 부시게도 해 떴네 <span class="cheer">(솔!로!데!뷔!) (SO! LO! DE! 必!)</span><br>
+        (Want you my right by my side love)<br>
+        어둠은 사라지고 해 떴네 <span class="cheer">(해!떴!네!)(嘿豆內!)</span><br>
+        (Want you my right by my side)<br>
+        저기 막 떴네<br>
+        What you want from me Aye<br>
+        해 떴네 uh
+      </p>
+    </div>
+  </article>
+
+
+  <!-- ===== California Love ===== -->
+  <article class="song" id="song-cali">
+    <div class="song-header">
+      <h1 class="song-title">California Love</h1>
+    </div>
+
+    <div class="video-section open">
+      <button class="video-toggle" onclick="toggleVideo(this)">
+        <div class="video-toggle-left">
+          <div class="video-icon">▶</div>
+          <div>
+            <span class="video-label">California Love 應援教學影片</span>
+          </div>
+        </div>
+        <span class="video-arrow">▼</span>
+      </button>
+      <div class="video-content">
+        <div class="video-grid">
+          <div class="video-item">
+            <span class="video-tag instagram">◎ Instagram</span>
+            <a class="ig-card" href="https://www.instagram.com/dh65_elf/reel/DA982fGTDXf/" target="_blank" rel="noopener noreferrer">
+              <div class="ig-icon-wrap">📷</div>
+              <div class="ig-text">
+                <div class="ig-handle">Instagram Reel</div>
+                <div class="ig-desc">California Love 應援教學</div>
+              </div>
+              <div class="ig-arrow">↗</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="legend">
+      <div class="legend-title">Color Guide ・ 顏色說明</div>
+      <div class="legend-item kor"><span class="legend-dot"></span><span>韓文歌詞 / Lyrics</span></div>
+      <div class="legend-item vocal"><span class="legend-dot"></span><span>跟唱 / 跟唸 Sing-along</span></div>
+      <div class="legend-item cheer"><span class="legend-dot"></span><span>應援詞 Fanchant</span></div>
+    </div>
+    <div class="lyrics">
+      <p class="stanza">
+        <span class="cheer">【이 동 해】(Lee Dong Hae)</span><br>
+        <span class="cheer">【이 동 해】(Lee Dong Hae)</span><br>
+        <span class="cheer">【이 동 해】(Lee Dong Hae)</span><br>
+        It’s <span class="vocal">California Love</span> Oh<br>
+        <span class="vocal">우리 둘의 Love(屋哩禿欸 Love)</span> Oh Oh<br>
+        We gotta go <span class="cheer">(go)</span> Where we goin’<span class="cheer">(go)</span><br>
+        I just feel like I’m in paradise
+      </p>
+
+      <p class="stanza">
+        예쁘장한 너의 얼굴은 참 조그매<br>
+        솜사탕 같은 너의 말투는 날 자극해<br>
+        Sexy 하게 탄 네 피부는 <span class="vocal">Gree Gree</span><br>
+        내 생각엔 우린 잘 어울려 <span class="vocal">끼리끼리(ㄍ一哩 ㄍ一哩)</span><br>
+        네 몸매는 마치 California 빛<br>
+        무모한 베팅에 따라오는 빚처럼<br>
+        내 모든 걸 네게 걸게<br>
+        오늘도 머릿속에 그려<br>
+        너와의 곡을 그려
+      </p>
+
+      <p class="stanza">
+        Woo 내 귓가에 들려 네 숨결<br>
+        오늘은 가지 마 All Night<br>
+        끝이 없단 걸 너도 알잖아 Baby<br>
+        이 시간이 영원하길 바라 Lady Yeah<br>
+        <span class="vocal">Not Today Not Today</span> Uh<br>
+        <span class="vocal">But Today But Today</span> 나<br>
+        지금 시작된 이 Party Alright<br>
+        On Fire Fire
+      </p>
+
+      <p class="stanza">
+        It’s <span class="vocal">California Love</span> Oh<br>
+        <span class="vocal">우리 둘의 Love(屋哩禿欸 Love)</span>  Oh Oh<br>
+        We gotta go<span class="cheer">(go)</span>  Where we goin’<span class="cheer">(go)</span><br>
+        I just feel like I’m in dream Oh<br>
+        Love Oh<br>
+        It’s <span class="vocal">California Love</span> Oh Oh<br>
+        네게서 두 눈을 뗄 수 없어 Baby<br>
+        둘이만 더 올라가자 Keep it on
+      </p>
+
+      <p class="stanza">
+        It’s <span class="vocal">California Love</span> Uh Yeah<br>
+        끝나지 않을 우리 밤 Uh Yeah<br>
+        <span class="vocal">Real Light Savage Light</span><br>
+        I just feel like I’m in paradise
+      </p>
+
+      <p class="stanza">
+        난 없진 않지 눈치<br>
+        미래를 보지 마치<br>
+        네 목에 걸려질 나의 Kiss<br>
+        It’s like a GUCCI<br>
+        난 원래 잘해 <span class="vocal">거래(勾類)</span><br>
+        너와는 다르게 <span class="vocal">갈래(嘎類)</span><br>
+        하지만 아무 생각 없이<br>
+        지금 너를 <span class="vocal">원해(翁嘿)</span><br>
+        내게 다른 답은 없는 걸<br>
+        뜨거운 태양처럼 빛난 널<br>
+        나의 상상 속에 걸어 <span class="vocal">매일(每一)</span><br>
+        이제는 현실이 돼<br>
+        우리 <span class="vocal">Day Day</span>
+      </p>
+
+      <p class="stanza">
+        시간이 더 다가오잖아<br>
+        네 몸에 더 눈이 가잖아<br>
+        That’s right<br>
+        지독하게 취해 더<br>
+        너의 품에 취해 Too Hot<br>
+        <span class="vocal">Not Today Not Today</span> Uh<br>
+        <span class="vocal">But Today But Today</span> 나<br>
+        지금 시작된 이 Party Alright<br>
+        On Fire Fire
+      </p>
+
+      <p class="stanza">
+        It’s <span class="vocal">California Love</span> Oh<br>
+        <span class="vocal">우리 둘의 Love (屋哩禿欸 Love)</span> Oh Oh<br>
+        We gotta go<span class="cheer">(go)</span>  Where we goin’<span class="cheer">(go)</span><br>
+        I just feel like I’m in dream Oh<br>
+        Love Oh<br>
+        It’s <span class="vocal">California Love</span> Oh Oh<br>
+        네게서 두 눈을 뗄 수 없어 Baby<br>
+        둘이만 더 올라가자 Keep it on
+      </p>
+
+      <p class="stanza">
+        지금 날 만진 손길로<br>
+        또 날이 밝아 Fly it Home<br>
+        어제완 다른 매일을 약속해<br>
+        또 잊지 못할 순간들을 기억해<br>
+        너 하나로 난 That’s enough<br>
+        나 숨이 벅차 Let me love<br>
+        Oh <span class="vocal">Help me Help me</span><br>
+        So <span class="vocal">Tell me Tell me</span>
+      </p>
+
+      <p class="stanza">
+        It’s <span class="vocal">California Love</span> Oh<br>
+        <span class="vocal">우리 둘의 Love (屋哩禿欸 Love)</span> Oh Oh<br>
+        We gotta go<span class="cheer">(go)</span>  Where we goin’<span class="cheer">(go)</span><br>
+        I just feel like I’m in dream Oh<br>
+        Love Oh<br>
+        It’s <span class="vocal">California Love</span> Oh Oh<br>
+        네게서 두 눈을 뗄 수 없어 Baby<br>
+        둘이만 더 올라가자 Keep it on
+      </p>
+
+      <p class="stanza">
+        It’s <span class="vocal">California Love</span> Uh Yeah<br>
+        끝나지 않을 우리 밤 Uh Yeah<br>
+        <span class="vocal">Real Light Savage Light</span><br>
+        What do you wanna do wanna do<br>
+        It’s <span class="vocal">California Love</span> Uh Yeah<br>
+        뜨겁게 불탈 우리 밤 Uh Yeah<br>
+        <span class="vocal">Real Light Savage Light</span><br>
+        I just feel like I’m in paradise
+      </p>
+    </div>
+  </article>
+
+
+  <!-- ===== Go High ===== -->
+  <article class="song" id="song-gohigh">
+    <div class="song-header">
+      <h1 class="song-title">Go High</h1>
+    </div>
+
+    <div class="video-section open">
+      <button class="video-toggle" onclick="toggleVideo(this)">
+        <div class="video-toggle-left">
+          <div class="video-icon">▶</div>
+          <div>
+            <span class="video-label">Go High 應援教學影片</span>
+          </div>
+        </div>
+        <span class="video-arrow">▼</span>
+      </button>
+      <div class="video-content">
+        <div class="video-grid">
+          <div class="video-item">
+            <div class="video-tag-row">
+              <span class="video-tag youtube">▶ YouTube</span>
+            </div>
+            <div class="video-iframe-wrap">
+              <iframe data-src="https://www.youtube.com/embed/M5VzYYgWF5U" title="Go High 應援教學" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+          <div class="video-item">
+            <span class="video-tag youtube">▶ YouTube ・ 韓文小教室</span>
+            <div class="video-iframe-wrap">
+              <iframe data-src="https://www.youtube.com/embed/STj5YJNkQlc" title="Go High 韓文小教室" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="legend">
+      <div class="legend-title">Color Guide ・ 顏色說明</div>
+      <div class="legend-item kor"><span class="legend-dot"></span><span>韓文歌詞 / Lyrics</span></div>
+      <div class="legend-item vocal"><span class="legend-dot"></span><span>跟唱 / 跟唸 Sing-along</span></div>
+      <div class="legend-item cheer"><span class="legend-dot"></span><span>應援詞 Fanchant</span></div>
+    </div>
+    <div class="lyrics">
+      <p class="stanza">
+        나 미쳐 I think so<br>
+        누울 시간도 없어 일에 미쳐<br>
+        어느새 CEO 이 자린 달러 싸움 마치 일보
+      </p>
+
+      <p class="stanza">
+        안 해본 거 해보라서 <span class="vocal">다해보는 중 (踏嘿波嫩 揪)</span><br>
+        아이 폰으로 고화질 널 <span class="vocal">땡겨보는 중 (顛歌波嫩 揪)</span><br>
+        봉은사 앞 Bike 타고 nike 신는 중 <span class="vocal">nike 신는 중 (nike 新嫩 揪)</span>
+      </p>
+
+      <p class="stanza">
+        Uh 빨리 시동 켜 Beat Drop해 <span class="cheer">(drop해)(drop 沛)</span><br>
+        Two choices D&E yeah<br>
+        And ma class 보면 <span class="vocal">Hot해 (Hot ㄊㄟˋ)</span><br>
+        얼굴이 Young 해도 위아래로 <span class="vocal">꺅해 (kkya kae)</span><br>
+        칵테일 콕테일 다 골라 <span class="vocal">shot해 (shotㄊㄟˋ)</span><br>
+        하루 숙취는 날 보고 <span class="vocal">탓해 (踏ㄊㄟˋ)</span><br>
+        흐름 따라가 내 분위기는 <span class="vocal">어때 (歐爹)</span><br>
+        아무거나 섞어 마시면 다 <span class="vocal">칵테일 (咖ㄊㄟˋ伊)</span>
+      </p>
+
+      <p class="stanza">
+        안 해본 거 해보라서 <span class="vocal">다해보는 중 (踏嘿波嫩 揪)</span><br>
+        아이폰으로 고화질 널 <span class="vocal">땡겨보는 중 (顛歌波嫩 揪)</span><br>
+        봉은사 앞 Bike 타고 nike 신는 중 <span class="vocal">nike 신는 중 (nike 新嫩 揪)</span>
+      </p>
+
+      <p class="stanza">
+        안 해본 거 해보라서 <span class="vocal">다해보는 중 (踏嘿波嫩 揪)</span><br>
+        아이폰으로 고화질 널 <span class="vocal">땡겨보는 중 (顛歌波嫩 揪)</span><br>
+        봉은사 앞 bike 타고 nike 신는 중 <span class="vocal">땡겨보는 중 (顛歌波嫩 揪)</span><br>
+        거기 거기 <span class="vocal">(Bad Bad)</span><br>
+        거기 거기 <span class="vocal">(Bad Bad)</span><br>
+        거기 거기 (That's right)<br>
+        거기 거기<br>
+        거기 거기 <span class="vocal">(Bad Bad)</span><br>
+        거기 거기 <span class="vocal">(Bad Bad)</span><br>
+        거기 거기 거기 거기<br>
+        거기 거기 <span class="vocal">(Bad Bad)</span><br>
+        거기 거기 <span class="vocal">(Bad Bad)</span><br>
+        거기 거기 거기 거기<br>
+        거기 거기 <span class="vocal">(Bad Bad)</span><br>
+        거기 거기 거기 거기
+      </p>
+
+      <p class="stanza">
+        Ready action camera 번쩍<br>
+        ODE lifestyle <span class="cheer">(D&E)</span><br>
+        턱 들어 다리 떨어 섹시한 Pose <span class="cheer">(Go High 이) (Go High 伊)</span><br>
+        We started Move your body<br>
+        Ready action camera 번쩍<br>
+        ODE lifestyle One
+      </p>
+
+      <p class="stanza">
+        걸어가는 길 길 uh 무대 위<br>
+        내가 빠지면 허전한 빈자리<br>
+        올라가는 기분 쩔어<br>
+        채워지는 게이지에<br>
+        리더 자리 비워 Kings보단 Aces
+      </p>
+
+      <p class="stanza">
+        안 해본 거 해보라서 <span class="vocal">다해보는 중 (踏嘿波嫩 揪)</span><br>
+        아이폰으로 고화질 널 <span class="vocal">땡겨보는 중 (顛歌波嫩 揪)</span><br>
+        봉은사 앞 Bike 타고 nike 신는 중 <span class="vocal">땡겨보는 중 (顛歌波嫩 揪)</span><br>
+        거기 거기 <span class="vocal">(Bad Bad)</span><br>
+        거기 거기 <span class="vocal">(Bad Bad)</span><br>
+        거기 거기 (That's right)<br>
+        거기 거기<br>
+        거기 거기 <span class="vocal">(Bad Bad)</span><br>
+        거기 거기 <span class="vocal">(Bad Bad)</span><br>
+        거기 거기 거기 거기<br>
+        거기 거기 <span class="vocal">(Bad Bad)</span><br>
+        거기 거기 <span class="vocal">(Bad Bad)</span><br>
+        거기 거기 거기 거기<br>
+        거기 거기 <span class="vocal">(Bad Bad)</span><br>
+        거기 거기 거기 거기
+      </p>
+
+      <p class="stanza">
+        <span class="vocal">D-O-N-G-H-A-E</span><br>
+        <span class="vocal">D-O-N-G-H-A-E</span><br>
+        <span class="vocal">월 화 수 목 금 토 일 (窩 花 蘇 摸 坑 偷 伊)</span><br>
+        <span class="vocal">여기 저기 거기 D&E Game Time</span><br>
+         <span class="vocal">(呦機 邱機 摳機 D&E Game Time)</span>
+      </p>
+
+      <p class="stanza">
+        <span class="vocal">I Go High Game Time</span><br>
+        우리 미모 아무도 못 말려<br>
+        <span class="vocal">You Go High Follow me</span><br>
+        우리 미소에 정신 못 차려
+      </p>
+
+      <p class="stanza">
+        <span class="vocal">I Go High Game Time</span><br>
+        우리 미모 아무도 못 말려<br>
+        <span class="vocal">You Go High Follow me</span><br>
+        우리 미소에 정신 못 차려
+      </p>
+    </div>
+  </article>
+
+
+  <!-- ===== GGB ===== -->
+  <article class="song" id="song-ggb">
+    <div class="song-header">
+      <h1 class="song-title">GGB 지지배</h1>
+    </div>
+
+    <div class="video-section open">
+      <button class="video-toggle" onclick="toggleVideo(this)">
+        <div class="video-toggle-left">
+          <div class="video-icon">▶</div>
+          <div>
+            <span class="video-label">GGB 지지배 應援教學影片</span>
+          </div>
+        </div>
+        <span class="video-arrow">▼</span>
+      </button>
+      <div class="video-content">
+        <div class="video-grid">
+          <div class="video-item">
+            <span class="video-tag youtube">▶ YouTube</span>
+            <div class="video-iframe-wrap">
+              <iframe data-src="https://www.youtube.com/embed/zw-S3wILmMU" title="GGB 응원법 教學" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="legend">
+      <div class="legend-title">Color Guide ・ 顏色說明</div>
+      <div class="legend-item kor"><span class="legend-dot"></span><span>韓文歌詞 / Lyrics</span></div>
+      <div class="legend-item vocal"><span class="legend-dot"></span><span>跟唱 / 跟唸 Sing-along</span></div>
+      <div class="legend-item cheer"><span class="legend-dot"></span><span>應援詞 Fanchant</span></div>
+    </div>
+    <div class="lyrics">
+      <p class="stanza">
+        <span class="cheer">SUPER JUNIOR D&E GO</span>
+      </p>
+
+      <p class="stanza">
+        계절이 지나 또 다른 온도 <span class="cheer">(다른 온도) (搭愣翁豆)</span><br>
+        여전히 마음은 네게 가 있어 <span class="cheer">(가 있어) (嘎以搜)</span><br>
+        너와 내가 머물던 지난 timeline<br>
+        어떻게 내가 잊겠어 나 혼자 여기서<br>
+        Yeah 어떻게 지내니?
+      </p>
+
+      <p class="stanza">
+        나는 혼자 잘 지냈어 <span class="cheer">(혼자 잘 지냈어)(紅家 才 及內搜)</span><br>
+        문득 네 생각에 살짝 정신이 나갔어 <span class="cheer">(정신이 나갔어)(窮星尼 那嘎搜)</span><br>
+        네가 없는 이곳에 oasis는 없어 <span class="cheer">(Hey, Hey)</span><br>
+        며칠째 목말라 절레절레 내려줘 단비
+      </p>
+
+      <p class="stanza">
+        <span class="vocal">우리 그때의(嗚利 苦得誒) Memory</span> <br>
+        <span class="vocal">더 늦기 전에(偷 ne gi 秋內) I'm sorry</span>
+      </p>
+
+      <p class="stanza">
+        네가 있는 곳은 어디<span class="cheer">(어디)(歐低)</span><br>
+        날 데려가 줘 빨리 <span class="cheer">(빨리)(八力)</span><br>
+        좀 벗어나자 둘이<span class="cheer">(둘이)(杜力)</span> <br>
+        내 손 잡아 <span class="vocal">We can fly</span>
+      </p>
+
+      <p class="stanza">
+        네 생각에 불 켜는 밤 <span class="cheer">(이 밤에)(以半美)</span><br>
+        끝을 몰라 뒤척이는 나 <span class="cheer">(So lonely)</span><br>
+        너 없이도 잘 돌아가는 밤 <span class="cheer">(밤, 밤)(邦邦)</span><br>
+        좀 슬퍼도 어쩌겠어 지켜볼게 멀리서
+      </p>
+
+      <p class="stanza">
+        너무 예쁜 입술에 <span class="cheer">(입 맞추던 네 모습에)(衣嘛 秋登 內某素杯)</span><br>
+        같이 보던 무지개 <span class="cheer">(무지개 같은 입술에)(木吉給 嘎登 衣素內)</span><br>
+        떠나간 네 모습에 <span class="cheer">(모습 Bae Bae)(某素杯杯)</span><br>
+        좀 슬퍼도 어쩌겠어 지켜볼게 멀리서
+      </p>
+
+      <p class="stanza">
+        아직도<br>
+        넌 나만의 bucket list<br>
+        매일 같이 듣던 음악은 아직 playlist에<br>
+        우리 story의 장르는 romance가 아냐<br>
+        Fantasy가 섞인 action<br>
+        복잡한 scenario
+      </p>
+
+      <p class="stanza">
+        딴 생각 안 나 I'm fallin' <span class="cheer">(fallin')</span><br>
+        너와 같이 있는 love story <span class="cheer">(story)</span><br>
+        잊지 못해 널 기다리고 있어
+      </p>
+
+      <p class="stanza">
+        네가 있는 곳은 어디<span class="cheer">(어디)(歐低)</span><br>
+        날 데려가 줘 빨리 <span class="cheer">(빨리)(八力)</span><br>
+        좀 벗어나자 둘이<span class="cheer">(둘이)(杜力)</span> <br>
+        내 손 잡아 <span class="vocal">We can fly</span>
+      </p>
+
+      <p class="stanza">
+        네 생각에 불 켜는 밤 <span class="cheer">(이 밤에)(以半美)</span><br>
+        끝을 몰라 뒤척이는 나 <span class="cheer">(So lonely)</span><br>
+        너 없이도 잘 돌아가는 밤 <span class="cheer">(밤, 밤)(邦邦)</span>
+      </p>
+
+      <p class="stanza">
+        너무 예쁜 입술에 <span class="cheer">(입 맞추던 네 모습에)(衣嘛 秋登 內某素杯)</span><br>
+        같이 보던 무지개 <span class="cheer">(무지개 같은 입술에)(木吉給 嘎登 衣素內)</span><br>
+        떠나 간네 모습에 <span class="cheer">(모습 Bae Bae)(某素杯杯)</span><br>
+        좀 슬퍼도 어쩌겠어 지켜볼게 멀리서
+      </p>
+
+      <p class="stanza">
+        계절이 지나 또 다른 온도 <span class="cheer">(다른 온도) (搭愣翁豆)</span><br>
+        여전히 마음은 네게 가 있어 <span class="cheer">(가 있어) (嘎以搜)</span><br>
+        네가 있는 곳은 어디<span class="cheer">(어디)(歐低)</span><br>
+        날 데려가 줘 빨리 <span class="cheer">(빨리)(八力)</span><br>
+        좀 벗어나자 둘이<span class="cheer">(둘이)(杜力)</span> <br>
+        내 손 잡아 <span class="vocal">We can fly</span>
+      </p>
+
+      <p class="stanza">
+        <span class="cheer">D&E GO!</span>
+      </p>
+
+      <p class="stanza">
+        잠시 머물러간 사랑이었나?<br>
+        우리 인연 여기까지였나?<br>
+        그 예쁜 미소 다신 볼 수는 없나? Yeah<br>
+        외로운 내 맘에 잠깐 와줄 순 없나
+      </p>
+
+      <p class="stanza">
+        너무 예쁜 입술에  <span class="cheer">(입 맞추던 네 모습에)(衣嘛 秋登 內某素杯)</span><br>
+        같이 보던 무지개 <span class="cheer">(무지개 같은 입술에)(木吉給 嘎登 衣素內)</span><br>
+        떠나 간네 모습에 <span class="cheer">(모습 Bae Bae)(某素杯杯)</span><br>
+        좀 슬퍼도 어쩌겠어 지켜볼게 멀리서
+      </p>
+    </div>
+  </article>
+
+
+  <!-- ===== Danger ===== -->
+  <article class="song" id="song-danger">
+    <div class="song-header">
+      <h1 class="song-title">Danger</h1>
+    </div>
+
+    <div class="video-section open">
+      <button class="video-toggle" onclick="toggleVideo(this)">
+        <div class="video-toggle-left">
+          <div class="video-icon">▶</div>
+          <div>
+            <span class="video-label">Danger 應援教學影片</span>
+          </div>
+        </div>
+        <span class="video-arrow">▼</span>
+      </button>
+      <div class="video-content">
+        <div class="video-grid">
+          <div class="video-item">
+            <span class="video-tag youtube">▶ YouTube</span>
+            <div class="video-iframe-wrap">
+              <iframe data-src="https://www.youtube.com/embed/2mf8Hf6-H2s" title="Danger 應援教學" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="legend">
+      <div class="legend-title">Color Guide ・ 顏色說明</div>
+      <div class="legend-item kor"><span class="legend-dot"></span><span>韓文歌詞 / Lyrics</span></div>
+      <div class="legend-item vocal"><span class="legend-dot"></span><span>跟唱 / 跟唸 Sing-along</span></div>
+      <div class="legend-item cheer"><span class="legend-dot"></span><span>應援詞 Fanchant</span></div>
+    </div>
+    <div class="lyrics">
+      <p class="stanza">
+        <span class="vocal">Danger！</span><br>
+        날마다 날마다 <span class="vocal">Hey</span> 저마다 착각을 <span class="vocal">해(嘿)</span> 제자리 찾아 나도 모를 자릴 찾으라 해<br>
+        내 말을 들어 너를 알아 누가 감히 나를 알아<span class="vocal">Don't you take a rest</span>이게 웬 난리래
+      </p>
+
+      <p class="stanza">
+        준비는 <span class="vocal">됐어(推搜)</span> (All right) 뻔한 얘기들도 <span class="vocal">That's all</span>그냥 심장을 따라<br>
+        멍청한 소린 <span class="vocal">치워(七窩)</span>불안한 마음은 <span class="vocal">비워(逼窩)</span> 불태워 네 모든 걸 던져 <span class="cheer">(DNE)</span>
+      </p>
+
+      <p class="stanza">
+        Danger<span class="cheer">【이/동/해 이/동/해】(Lee Dong Hae . Lee Dong Hae)</span> 모조리 겨냥해 겨냥해<br>
+        거침없이 Danger<span class="cheer">【이/동/해 이/동/해】(Lee Dong Hae . Lee Dong Hae)</span> 싹 다<br>
+        겨냥해 겨냥해 모조리 <span class="vocal">겨냥해(摳釀嘿)</span><br>
+        난 거침없는 놈그런 놈<span class="cheer">【D/N/E】</span><br>
+        난 겁이 없는 놈 그런 놈<span class="cheer">【D/N/E】</span><br>
+        <span class="vocal">La La La La La</span> 겨낭해 겨냥해 모조리 <span class="vocal">겨냥해(摳釀嘿) my</span>
+      </p>
+
+      <p class="stanza">
+        또 본 적 없는 내일 걱정하고 있네 머저리 질 거란 생각에 사로잡혀있네 처절히<br>
+        더 겁먹을 것 없지 됐어 반전은 짜릿해 샴페인 네 몸의 가치를 올려놔 누구도 올라갈 수 없게 더
+      </p>
+
+      <p class="stanza">
+        준비는 <span class="vocal">됐어(推搜)</span> 뻔한 얘기들啊啊啊도 <span class="vocal">That's all</span> 그냥 심장을 따라<br>
+        멍청한 소린 <span class="vocal">치워(七窩)</span> 불안한 마음은 <span class="vocal">비워(逼窩)</span> 불태워 네 모든 걸 던 <span class="cheer">(DNE)</span>
+      </p>
+
+      <p class="stanza">
+        Danger<span class="cheer">【이/동/해 이/동/해】(Lee Dong Hae . Lee Dong Hae)</span> 모조리 겨냥해 겨냥해<br>
+        거침없이 Danger<span class="cheer">【이/동/해 이/동/해】(Lee Dong Hae . Lee Dong Hae)</span> 싹 다<br>
+        겨냥해 겨냥해 모조리 <span class="vocal">겨냥해(摳釀嘿)</span><br>
+        난 거침없는 놈그런 놈<span class="cheer">【D/N/E】</span><br>
+        난 겁이 없는 놈 그런 놈<span class="cheer">【D/N/E】</span><br>
+        <span class="vocal">La La La La La</span>  겨낭해 겨냥해 모조리 <span class="vocal">겨냥해(摳釀嘿)</span>
+      </p>
+
+      <p class="stanza">
+        생각의 끝에 그냥 너를 걸어 더는 멈추지 마 뒤는 보지 마 네 안에 있는 다른 너를 깨워<br>
+        이제 다시 일어나 <span class="vocal">싹 다(撒 踏)</span> 나를 따라와라<br>
+        싹 다 모두 따라와라<br>
+        싹 다 모두 따라와라<br>
+        <span class="vocal">La La La La La La</span> 나를 따라와라<br>
+        <span class="vocal">LaLa La La La La</span> 모두 따라와라<br>
+        <span class="vocal">La La La La La La</span> 거침없이<br>
+        <span class="vocal">La La La La La La</span> 모조리 겨냥해
+      </p>
+    </div>
+  </article>
+
+  <!-- ===== 'Bout You ===== -->
+  <article class="song" id="song-bout">
+    <div class="song-header">
+      <h1 class="song-title">'Bout You</h1>
+    </div>
+
+    <div class="video-section open">
+      <button class="video-toggle" onclick="toggleVideo(this)">
+        <div class="video-toggle-left">
+          <div class="video-icon">▶</div>
+          <div>
+            <span class="video-label">'Bout You 應援教學影片</span>
+          </div>
+        </div>
+        <span class="video-arrow">▼</span>
+      </button>
+      <div class="video-content">
+        <div class="video-grid">
+          <div class="video-item">
+            <span class="video-tag youtube">▶ YouTube</span>
+            <div class="video-iframe-wrap">
+              <iframe data-src="https://www.youtube.com/embed/lsey0aJlOI4" title="'Bout You 應援教學" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="legend">
+      <div class="legend-title">Color Guide ・ 顏色說明</div>
+      <div class="legend-item kor"><span class="legend-dot"></span><span>韓文歌詞 / Lyrics</span></div>
+      <div class="legend-item vocal"><span class="legend-dot"></span><span>跟唱 / 跟唸 Sing-along</span></div>
+      <div class="legend-item cheer"><span class="legend-dot"></span><span>應援詞 Fanchant</span></div>
+    </div>
+    <div class="lyrics">
+      <p class="stanza">
+        登登登登~登登登<span class="cheer">（SU! PER! JUNI! OR! D! N! E!）</span><br>
+        머리부터 발끝까지 <span class="cheer">【이 동 해】(Lee Dong Hae)</span><br>
+        너무 내게 눈이 부셔<span class="cheer">【이 동 해】(Lee Dong Hae)</span>
+      </p>
+
+      <p class="stanza">
+        넌 참 짜릿짜릿해 가끔은 또 여리여리해<br>
+        시간이 갈수록 더 난 달려 너라는 방향의 Road<br>
+        북적북적한 <span class="vocal">거리(摳哩)</span> 같이 걸어볼까 <span class="vocal">우리(巫哩)</span><br>
+        난 네가 좋다면 <span class="vocal">Yeah</span> 그 어디든 갈 수 있어
+      </p>
+
+      <p class="stanza">
+        내 맘을 전부 설명할 수 조차 없어<br>
+        그냥 하는 말이 아니야<br>
+        너만 떠오르는 거야 <span class="vocal">Yeah</span><br>
+        I want to know you, Just all about you<br>
+        이유는 묻지 마 내게 그냥 답은 <span class="vocal">너야 (NO呀)</span>
+      </p>
+
+      <p class="stanza">
+        머리부터 발끝까지 <span class="cheer">(Wow Wow Wow Wow)</span><br>
+        너무 내게 눈이 부셔 <span class="cheer">(Sha La La La)</span><br>
+        너는 내게 공기 <span class="cheer">(Air Air)</span><br>
+        나를 보며 웃어줘 <span class="cheer">Yeah</span><br>
+        난 그걸로 충분해 <span class="cheer">Yeah</span>
+      </p>
+
+      <p class="stanza">
+        내가 찾던 사람 바로 너야<span class="cheer">【이 동 해】(Lee Dong Hae)</span>(All about you）<br>
+        네가 찾고 있는 사람 나야<span class="cheer">【이 동 해】(Lee Dong Hae)</span>（All about you)<br>
+        I am just thinking all about <span class="vocal">you, you</span><br>
+        내가 같이하고 싶은 사람 너야  <span class="cheer">(D N E)</span> All about you
+      </p>
+
+      <p class="stanza">
+        너의 손을 잡고 나의 품 안에 Ye Ye<br>
+        거의 모든 날에 또 나의 순간엔 너 Ye<br>
+        눈이 부신 <span class="vocal">햇살(嘿沙)</span> 그보다 빛나던 나의 <span class="vocal">세상(誰尚)</span><br>
+        다시 데려가 <span class="vocal">줘요(揪喲)</span> 날아 다니게 해<span class="vocal">줘요(揪喲)</span><br>
+        너의 하늘에서 자유롭게
+      </p>
+
+      <p class="stanza">
+        넌 정말 쉽진 않아 내겐 참 어려워<br>
+        내 머리가 아니야 내 가슴이 널 불러 <span class="vocal">Yeah</span><br>
+        I want to know you, Just all about you<br>
+        이유는 묻지 마 내게 그냥 답은 <span class="vocal">너야 (NO呀 )</span>
+      </p>
+
+      <p class="stanza">
+        머리부터 발끝까지 <span class="cheer">(Wow Wow Wow Wow)</span><br>
+        너무 내게 눈이 부셔 <span class="cheer">(Sha La La La)</span><br>
+        너는 내게 공기 <span class="cheer">(Air, Air)</span><br>
+        나를 보며 웃어줘 <span class="vocal">Yeah</span><br>
+        난 그걸로 충분해 <span class="vocal">Yeah</span>
+      </p>
+
+      <p class="stanza">
+        내가 찾던 사람 바로 너야<span class="cheer">【이 동 해】(Lee Dong Hae)</span>（All about you）<br>
+        네가 찾고 있는 사람 나야<span class="cheer">【이 동 해】(Lee Dong Hae)</span>（All about you）<br>
+        I am just thinking all about <span class="vocal">you, you</span><br>
+        내가 같이하고 싶은 사람 너야  <span class="cheer">(D N E)</span> All about you
+      </p>
+
+      <p class="stanza">
+        시간이 됐다 말해 같이 있고 싶다 말해<br>
+        또 다치고 아파도 난 너니까 라고 말해<br>
+        시간이 됐다 말해 같이 있고 싶다 말해<br>
+        또 다시 다치고 아파도 그래도 <span class="vocal">너니까 너니까 (弄你嘎 弄你嘎)</span> <span class="cheer">(D N E)</span>
+      </p>
+
+      <p class="stanza">
+        너란 여잔 나를 너무 몰라<br>
+        나란 남잔 이별을 아주 몰라<br>
+        쉽진 않아 내게 너라는 여잔<br>
+        그래도 난 계속 너이길 바래 난 바래<br>
+        내가 찾던 사람 바로 너야<span class="cheer">【머리부터】(摸力不偷)</span>（All about you）<br>
+        네가 찾고 있는 사람 나야<span class="cheer">【발끝까지】(怕更嘎季)</span>（All about you）<br>
+        I am just thinking all about <span class="vocal">you, you</span><br>
+        내가 같이하고 싶은 사람 너야 <span class="cheer">(D N E)</span> （All about you）
+      </p>
+    </div>
+  </article>
+
+
+  <!-- ===== 我們是 E.L.F. ===== -->
+  <article class="song" id="song-elf">
+    <div class="song-header">
+      <h1 class="song-title">我們是 E.L.F.</h1>
+    </div>
+
+    <div class="elf-only">
+      <div class="video-section open">
+        <button class="video-toggle" onclick="toggleVideo(this)">
+          <div class="video-toggle-left">
+            <div class="video-icon">▶</div>
+            <div>
+              <span class="video-label">我們是 E.L.F. 應援教學影片</span>
+            </div>
+          </div>
+          <span class="video-arrow">▼</span>
+        </button>
+        <div class="video-content">
+          <div class="video-grid">
+            <div class="video-item">
+              <span class="video-tag youtube">▶ YouTube</span>
+              <div class="video-iframe-wrap">
+                <iframe data-src="https://www.youtube.com/embed/KaI_L_Dt5z4" title="我們是 E.L.F. 應援教學" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+
+</main>
+
+<button class="top-btn" id="topBtn" aria-label="回頂部">↑</button>
+
+<footer>
+  <div class="bracket">DONGHAE 1ST SOLO CONCERT TOUR [ALIVE] in KAOHSIUNG</div>
+  <div>Donghae TW&ELF Union 台灣聯合應援團隊</div>
+</footer>
+
+<script>
+  // 影片懶載入：只在歌曲被選中時才載入該首歌的 YouTube iframe
+  function loadVideosInSong(songElement){
+    if(!songElement) return;
+    const iframes = songElement.querySelectorAll('iframe[data-src]');
+    iframes.forEach(iframe => {
+      iframe.src = iframe.dataset.src;
+      iframe.removeAttribute('data-src'); // 載入過就清掉，避免重複
+    });
+  }
+
+  // 卸載非當前歌曲的影片（停止背景播放、釋放資源）
+  function unloadVideosInSong(songElement){
+    if(!songElement) return;
+    const iframes = songElement.querySelectorAll('iframe[src]');
+    iframes.forEach(iframe => {
+      // 把 src 移回 data-src，下次切回來再載入
+      iframe.dataset.src = iframe.src;
+      iframe.removeAttribute('src');
+    });
+  }
+
+  // 影片區塊展開/收合
+  function toggleVideo(btn){
+    const section = btn.parentElement;
+    section.classList.toggle('open');
+    // 展開時才載入這個區塊的影片（如果還沒載入）
+    if(section.classList.contains('open')){
+      loadVideosInSong(section);
+    }
+  }
+
+  // 切換歌曲
+  const buttons = document.querySelectorAll('.nav-btn');
+  const songs = document.querySelectorAll('.song');
+
+  buttons.forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      // 卸載其他歌曲的影片，節省資源
+      songs.forEach(s => {
+        if(s.classList.contains('active')) unloadVideosInSong(s);
+        s.classList.remove('active');
+      });
+      buttons.forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      const target = document.getElementById(btn.dataset.target);
+      target.classList.add('active');
+      // 載入這首歌的影片
+      loadVideosInSong(target);
+      // 平滑滾動到內容
+      window.scrollTo({
+        top: document.querySelector('.nav').offsetTop - 0,
+        behavior:'smooth'
+      });
+    });
+  });
+
+  // 頁面初始：載入預設選中的歌曲（해 떴네）的影片
+  const initialActiveSong = document.querySelector('.song.active');
+  if(initialActiveSong) loadVideosInSong(initialActiveSong);
+
+  // 回頂部
+  const topBtn = document.getElementById('topBtn');
+  window.addEventListener('scroll',()=>{
+    if(window.scrollY > 400) topBtn.classList.add('show');
+    else topBtn.classList.remove('show');
+  });
+  topBtn.addEventListener('click',()=>{
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+</script>
+
+
+<!-- ===== GA 點擊事件追蹤 ===== -->
+<script>
+  // 確保 gtag 已載入
+  function trackEvent(eventName, params){
+    if (typeof gtag === 'function') {
+      gtag('event', eventName, params);
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    
+    // 1. 追蹤外連結按鈕（MP3 / YouTube / 表單 / 安可曲）
+    document.querySelectorAll('.mp3-btn').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        const label = btn.textContent.trim();
+        const href = btn.getAttribute('href') || '';
+        const isExternal = btn.getAttribute('target') === '_blank';
+        trackEvent('button_click', {
+          button_name: label,
+          button_type: isExternal ? 'external_link' : 'internal_link',
+          link_url: href,
+          page_location: window.location.pathname
+        });
+      });
+    });
+
+    // 2. 追蹤歌曲切換 nav-btn
+    document.querySelectorAll('.nav-btn').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        const songName = btn.textContent.trim();
+        const target = btn.getAttribute('data-target') || '';
+        trackEvent('song_click', {
+          song_name: songName,
+          song_id: target,
+          page_location: window.location.pathname
+        });
+      });
+    });
+
+    // 3. 追蹤影片展開/收起 (video-toggle)
+    document.querySelectorAll('.video-toggle').forEach(function(toggle){
+      toggle.addEventListener('click', function(){
+        const section = toggle.closest('.video-section');
+        const isOpen = section && section.classList.contains('open');
+        // 找這個影片屬於哪首歌
+        const songArticle = toggle.closest('article.song');
+        const songId = songArticle ? songArticle.id : 'unknown';
+        const labelEl = toggle.querySelector('.video-label');
+        const videoLabel = labelEl ? labelEl.textContent.trim() : '';
+        trackEvent('video_toggle', {
+          action: isOpen ? 'collapse' : 'expand',  // 注意：執行 click 時 class 還沒切換，所以反向
+          song_id: songId,
+          video_label: videoLabel
+        });
+      });
+    });
+
+  });
+</script>
+</body>
+</html>
