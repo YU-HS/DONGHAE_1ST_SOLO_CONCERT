@@ -201,8 +201,34 @@
   .mp3-btn::before{content:'[ ';opacity:.5;margin-right:2px}
   .mp3-btn::after{content:' ]';opacity:.5;margin-left:2px}
   .mp3-btn:hover{background:var(--cyan);color:var(--bg-deep)}
-  .mp3-btn.page-btn{color:var(--magenta);border-color:var(--magenta)}
-  .mp3-btn.page-btn:hover{background:var(--magenta);color:var(--bg-deep)}
+  /* 小幫手招募 + 集資進行中 — 金黃實心 + 深藍字 + 脈動 */
+  .mp3-btn.page-btn,
+  .mp3-btn.crowd-btn{
+    background:#ffd944;
+    color:var(--bg-deep);
+    border-color:#ffd944;
+    font-weight:700;
+    box-shadow:0 0 16px rgba(255,217,68,.45);
+    animation:crowdPulse 2s ease-in-out infinite;
+    position:relative;
+  }
+  .mp3-btn.page-btn::before,
+  .mp3-btn.crowd-btn::before{content:'[ ';opacity:.6;margin-right:2px;color:var(--bg-deep)}
+  .mp3-btn.page-btn::after,
+  .mp3-btn.crowd-btn::after{content:' ]';opacity:.6;margin-left:2px;color:var(--bg-deep)}
+  .mp3-btn.page-btn:hover,
+  .mp3-btn.crowd-btn:hover{
+    background:#ffe680;
+    color:var(--bg-deep);
+    border-color:#ffe680;
+    box-shadow:0 0 24px rgba(255,217,68,.8);
+    animation:none;
+    transform:translateY(-1px);
+  }
+  @keyframes crowdPulse{
+    0%,100%{box-shadow:0 0 16px rgba(255,217,68,.45)}
+    50%{box-shadow:0 0 24px rgba(255,217,68,.8)}
+  }
 
   .note{
     max-width:820px;
@@ -529,11 +555,14 @@
       <a href="https://youtube.com/playlist?list=PLWYr7XQ5cNes&si=wAzw6we4RuW21m5j" target="_blank" rel="noopener noreferrer" class="mp3-btn">
         <span>安可 YT 播放清單</span>
       </a>
-      <a href="KH_Fanchant.html" class="mp3-btn page-btn">
+      <a href="KH_Fanchant.html" class="mp3-btn">
         <span>應援口號</span>
       </a>
       <a href="https://forms.gle/ZGLHpgswbcVi4aoc6" target="_blank" rel="noopener noreferrer" class="mp3-btn page-btn">
         <span>小幫手招募</span>
+      </a>
+      <a href="https://forms.gle/KdfEwrSyPfuMK98Q7" target="_blank" rel="noopener noreferrer" class="mp3-btn crowd-btn">
+        <span>集資進行中</span>
       </a>
     </div>
   </div>
